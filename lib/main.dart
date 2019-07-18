@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import 'package:craigslist/country_list.dart';
+
 void main() {
 //  SystemChrome.setEnabledSystemUIOverlays([]);
   runApp(new MyApp());
@@ -72,9 +74,20 @@ class _MyHomePageState extends State<MyHomePage> {
                 child: new TextField(
                   keyboardType: TextInputType.emailAddress,
                   decoration: new InputDecoration(
-                      border: InputBorder.none,
-                      disabledBorder: new OutlineInputBorder(
-                          borderRadius: new BorderRadius.circular(4)),
+                      contentPadding:
+                          EdgeInsets.only(left: 15, top: 15, bottom: 15),
+                      focusedBorder: new OutlineInputBorder(
+                          borderRadius: BorderRadius.all(Radius.circular(4)),
+                          borderSide: BorderSide(
+                              color: Colors.white, width: 0.0)),
+                      enabledBorder: new OutlineInputBorder(
+                          borderRadius: BorderRadius.all(Radius.circular(4)),
+                          borderSide: BorderSide(
+                              color: Colors.white, width: 0.0)),
+                      border: new OutlineInputBorder(
+                          borderRadius: BorderRadius.all(Radius.circular(4)),
+                          borderSide: BorderSide(
+                              color: Colors.white, width: 0.0)),
                       hintText: 'user name / email',
                       filled: true,
                       fillColor: Color.fromRGBO(246, 247, 249, 1)),
@@ -87,9 +100,20 @@ class _MyHomePageState extends State<MyHomePage> {
                 child: new TextField(
                   obscureText: true,
                   decoration: new InputDecoration(
-                      border: InputBorder.none,
-                      disabledBorder: new OutlineInputBorder(
-                          borderRadius: new BorderRadius.circular(4)),
+                      contentPadding:
+                      EdgeInsets.only(left: 15, top: 15, bottom: 15),
+                      focusedBorder: new OutlineInputBorder(
+                          borderRadius: BorderRadius.all(Radius.circular(4)),
+                          borderSide: BorderSide(
+                              color: Colors.white, width: 0.0)),
+                      enabledBorder: new OutlineInputBorder(
+                          borderRadius: BorderRadius.all(Radius.circular(4)),
+                          borderSide: BorderSide(
+                              color: Colors.white, width: 0.0)),
+                      border: new OutlineInputBorder(
+                          borderRadius: BorderRadius.all(Radius.circular(4)),
+                          borderSide: BorderSide(
+                              color: Colors.white, width: 0.0)),
                       hintText: 'password',
                       filled: true,
                       fillColor: Color.fromRGBO(246, 247, 249, 1)),
@@ -103,7 +127,12 @@ class _MyHomePageState extends State<MyHomePage> {
               minWidth: 345,
               buttonColor: Color.fromRGBO(73, 128, 249, 1),
               child: RaisedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => country_list()),
+                    );
+                  },
                   child: new Text(
                     "LOGIN",
                     style: new TextStyle(
