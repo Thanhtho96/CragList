@@ -67,32 +67,38 @@ class _MyHomePageState extends State<MyHomePage> {
         child: ListView(
           padding: EdgeInsets.only(left: 15, top: 287, right: 15),
           children: <Widget>[
-            new TextField(
-              keyboardType: TextInputType.emailAddress,
-              decoration: new InputDecoration(
-                  border: InputBorder.none,
-                  disabledBorder: new OutlineInputBorder(
-                      borderRadius: new BorderRadius.circular(4)),
-                  hintText: 'user name / email',
-                  filled: true,
-                  fillColor: Color.fromRGBO(246, 247, 249, 1)),
-              style: new TextStyle(fontSize: 16.0, fontFamily: "SFProDisplay"),
-            ),
+            new Container(
+                height: 49,
+                child: new TextField(
+                  keyboardType: TextInputType.emailAddress,
+                  decoration: new InputDecoration(
+                      border: InputBorder.none,
+                      disabledBorder: new OutlineInputBorder(
+                          borderRadius: new BorderRadius.circular(4)),
+                      hintText: 'user name / email',
+                      filled: true,
+                      fillColor: Color.fromRGBO(246, 247, 249, 1)),
+                  style:
+                      new TextStyle(fontSize: 16.0, fontFamily: "SFProDisplay"),
+                )),
             new Padding(padding: EdgeInsets.only(top: 20)),
-            new TextField(
-              obscureText: true,
-              decoration: new InputDecoration(
-                  border: InputBorder.none,
-                  disabledBorder: new OutlineInputBorder(
-                      borderRadius: new BorderRadius.circular(4)),
-                  hintText: 'password',
-                  filled: true,
-                  fillColor: Color.fromRGBO(246, 247, 249, 1)),
-              style: new TextStyle(fontSize: 16.0, fontFamily: "SFProDisplay"),
-            ),
+            new Container(
+                height: 49,
+                child: new TextField(
+                  obscureText: true,
+                  decoration: new InputDecoration(
+                      border: InputBorder.none,
+                      disabledBorder: new OutlineInputBorder(
+                          borderRadius: new BorderRadius.circular(4)),
+                      hintText: 'password',
+                      filled: true,
+                      fillColor: Color.fromRGBO(246, 247, 249, 1)),
+                  style:
+                      new TextStyle(fontSize: 16.0, fontFamily: "SFProDisplay"),
+                )),
             new Padding(padding: EdgeInsets.only(top: 20)),
             new ButtonTheme(
-              padding: EdgeInsets.only(left: 15, right: 15),
+              padding: EdgeInsets.only(left: 16, right: 16),
               height: 50,
               minWidth: 345,
               buttonColor: Color.fromRGBO(73, 128, 249, 1),
