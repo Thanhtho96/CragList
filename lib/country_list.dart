@@ -62,29 +62,40 @@ class _MyHomePageState extends State<MyHomePage> {
                           focusedBorder: new OutlineInputBorder(
                               borderRadius:
                                   BorderRadius.all(Radius.circular(32)),
-                              borderSide: BorderSide(
-                                  color: Colors.white, width: 0.0)),
+                              borderSide:
+                                  BorderSide(color: Colors.white, width: 0.0)),
                           enabledBorder: new OutlineInputBorder(
                               borderRadius:
                                   BorderRadius.all(Radius.circular(32)),
-                              borderSide: BorderSide(
-                                  color: Colors.white, width: 0.0)),
+                              borderSide:
+                                  BorderSide(color: Colors.white, width: 0.0)),
                           border: new OutlineInputBorder(
                               borderRadius:
                                   BorderRadius.all(Radius.circular(32)),
-                              borderSide: BorderSide(
-                                  color: Colors.white, width: 0.0)),
+                              borderSide:
+                                  BorderSide(color: Colors.white, width: 0.0)),
                           hintText: 'Search',
                           filled: true,
                           fillColor: Color.fromRGBO(246, 247, 249, 1),
                           suffixIcon: Image.asset(
                             "images/search.png",
-                            scale: 2,
+                            scale: 4,
+                            width: 24,
+                            height: 24,
                           )),
                       style: new TextStyle(
                           fontSize: 20.0, fontFamily: "SFProDisplay"),
                     )),
-              ]))
+                new Container(
+                  padding: EdgeInsets.only(top: 25),
+                  alignment: Alignment.topLeft,
+                  child: new Text(
+                    "India",
+                    style: new TextStyle(
+                        fontSize: 25, fontFamily: "SFProDisplay-Bold"),
+                  ),
+                ),
+              ])),
         ],
       ),
     );
