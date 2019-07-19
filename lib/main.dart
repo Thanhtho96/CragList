@@ -85,10 +85,6 @@ class _MyHomePageState extends State<MyHomePage> {
                             borderRadius: BorderRadius.all(Radius.circular(4)),
                             borderSide:
                                 BorderSide(color: Colors.white, width: 0.0)),
-                        border: new OutlineInputBorder(
-                            borderRadius: BorderRadius.all(Radius.circular(4)),
-                            borderSide:
-                                BorderSide(color: Colors.white, width: 0.0)),
                         hintText: 'user name / email',
                         filled: true,
                         fillColor: Color.fromRGBO(246, 247, 249, 1)),
@@ -108,10 +104,6 @@ class _MyHomePageState extends State<MyHomePage> {
                             borderSide:
                                 BorderSide(color: Colors.white, width: 0.0)),
                         enabledBorder: new OutlineInputBorder(
-                            borderRadius: BorderRadius.all(Radius.circular(4)),
-                            borderSide:
-                                BorderSide(color: Colors.white, width: 0.0)),
-                        border: new OutlineInputBorder(
                             borderRadius: BorderRadius.all(Radius.circular(4)),
                             borderSide:
                                 BorderSide(color: Colors.white, width: 0.0)),

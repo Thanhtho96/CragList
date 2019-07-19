@@ -69,11 +69,6 @@ class _MyHomePageState extends State<MyHomePage> {
                                   BorderRadius.all(Radius.circular(32)),
                               borderSide:
                                   BorderSide(color: Colors.white, width: 0.0)),
-                          border: new OutlineInputBorder(
-                              borderRadius:
-                                  BorderRadius.all(Radius.circular(32)),
-                              borderSide:
-                                  BorderSide(color: Colors.white, width: 0.0)),
                           hintText: 'Search',
                           filled: true,
                           fillColor: Color.fromRGBO(246, 247, 249, 1),
