@@ -75,10 +75,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           filled: true,
                           fillColor: Color.fromRGBO(246, 247, 249, 1),
                           suffixIcon: Image.asset(
-                            "images/search.png",
-                            scale: 4,
-                            width: 24,
-                            height: 24,
+                            "images/search.png"
                           )),
                       style: new TextStyle(
                           fontSize: 20.0, fontFamily: "SFProDisplay"),

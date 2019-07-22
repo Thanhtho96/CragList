@@ -42,8 +42,7 @@ class _MyHomePageState extends State<MyHomePage> {
               padding: const EdgeInsets.all(0.0),
               alignment: Alignment.topLeft,
               child: new Image.asset("images/path_3.png"),
-              width: 213.6,
-              height: 193.5),
+              ),
           new Container(
               padding: const EdgeInsets.all(100.0),
               alignment: Alignment.topCenter,
@@ -51,8 +50,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   new Column(children: <Widget>[
-                    new Image.asset("images/combined_shape.png",
-                        width: 66, height: 66),
+                    new Image.asset("images/combined_shape.png"),
                     new Padding(padding: EdgeInsets.fromLTRB(0, 15, 0, 0)),
                     new Text(
                       "Craigslist",
