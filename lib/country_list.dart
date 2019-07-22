@@ -101,21 +101,28 @@ class _MyHomePageState extends State<MyHomePage> {
                 color: Color.fromRGBO(246, 247, 249, 1),
               ),
               itemCount: 20,
-              itemBuilder: (context, index) => GestureDetector(
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => category_card()),
-                  );
-                },
-                child: Container(
-                  padding: EdgeInsets.only(left: 15, top: 15, bottom: 17),
-                  child: Text(
-                    "Index $index",
-                    style: new TextStyle(
-                        fontSize: 20,
-                        color: Color.fromRGBO(37, 56, 88, 1),
-                        fontFamily: 'SFProDisplay-Regular'),
+              itemBuilder: (context, index) => ButtonTheme(
+                height: 55,
+                minWidth: double.infinity,
+                buttonColor: Colors.white,
+                child: RaisedButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => category_card()),
+                    );
+                  },
+                  child: Container(
+                    padding: EdgeInsets.only(top: 15, bottom: 17),
+                    alignment: Alignment.centerLeft,
+                    child: Text(
+                      "Index $index",
+                      style: new TextStyle(
+                          fontSize: 20,
+                          color: Color.fromRGBO(37, 56, 88, 1),
+                          fontFamily: 'SFProDisplay-Regular'),
+                    ),
                   ),
                 ),
               ),
