@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 
 import 'package:craigslist/category_card.dart';
 
 void main() {
+  debugPaintSizeEnabled = true;
   runApp(new country_list());
 }
 
@@ -33,6 +35,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
+
       body: new Stack(
         children: <Widget>[
           new Container(
@@ -93,43 +96,37 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
           )),
           Padding(
-            padding: EdgeInsets.only(top: 163),
+            padding: EdgeInsets.only(top: 178),
             child: new ListView.separated(
+              padding: EdgeInsets.all(0.0),
               separatorBuilder: (context, index) => new Container(
                 height: 2.0,
                 color: Color.fromRGBO(246, 247, 249, 1),
               ),
               itemCount: 20,
-              itemBuilder: (context, index) => Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                mainAxisSize: MainAxisSize.max,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: <Widget>[
-                  GestureDetector(
-                    onTap: (){
-                      print("Container clicked");
+              itemBuilder: (context, index) => GestureDetector(
+                onTap: (){
+                  print("Container clicked");
+                },
+                child: Container(
+                  padding: EdgeInsets.only(left: 15, top: 15, bottom: 17),
+                  child: InkWell(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => category_card()),
+                      );
                     },
-                    child: Padding(
-                      padding: EdgeInsets.only(left: 15, top: 15, bottom: 17),
-                      child: InkWell(
-                        onTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => category_card()),
-                          );
-                        },
-                        child: Text(
-                          "Index $index",
-                          style: new TextStyle(
-                              fontSize: 20,
-                              color: Color.fromRGBO(37, 56, 88, 1),
-                              fontFamily: 'SFProDisplay-Regular'),
-                        ),
-                      ),
+                    child: Text(
+                      "Index $index",
+                      style: new TextStyle(
+                          fontSize: 20,
+                          color: Color.fromRGBO(37, 56, 88, 1),
+                          fontFamily: 'SFProDisplay-Regular'),
                     ),
                   ),
-                ],
+                ),
               ),
             ),
           )
