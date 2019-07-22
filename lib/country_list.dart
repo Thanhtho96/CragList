@@ -35,7 +35,6 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
-
       body: new Stack(
         children: <Widget>[
           new Container(
@@ -77,9 +76,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           hintText: 'Search',
                           filled: true,
                           fillColor: Color.fromRGBO(246, 247, 249, 1),
-                          suffixIcon: Image.asset(
-                            "images/search.png"
-                          )),
+                          suffixIcon: Image.asset("images/search.png")),
                       style: new TextStyle(
                           fontSize: 20.0, fontFamily: "SFProDisplay"),
                     )),
@@ -105,26 +102,20 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
               itemCount: 20,
               itemBuilder: (context, index) => GestureDetector(
-                onTap: (){
-                  print("Container clicked");
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => category_card()),
+                  );
                 },
                 child: Container(
                   padding: EdgeInsets.only(left: 15, top: 15, bottom: 17),
-                  child: InkWell(
-                    onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => category_card()),
-                      );
-                    },
-                    child: Text(
-                      "Index $index",
-                      style: new TextStyle(
-                          fontSize: 20,
-                          color: Color.fromRGBO(37, 56, 88, 1),
-                          fontFamily: 'SFProDisplay-Regular'),
-                    ),
+                  child: Text(
+                    "Index $index",
+                    style: new TextStyle(
+                        fontSize: 20,
+                        color: Color.fromRGBO(37, 56, 88, 1),
+                        fontFamily: 'SFProDisplay-Regular'),
                   ),
                 ),
               ),

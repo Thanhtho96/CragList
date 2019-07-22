@@ -39,10 +39,10 @@ class _MyHomePageState extends State<MyHomePage> {
         resizeToAvoidBottomPadding: false,
         body: new Stack(children: <Widget>[
           new Container(
-              padding: const EdgeInsets.all(0.0),
-              alignment: Alignment.topLeft,
-              child: new Image.asset("images/path_3.png"),
-              ),
+            padding: const EdgeInsets.all(0.0),
+            alignment: Alignment.topLeft,
+            child: new Image.asset("images/path_3.png"),
+          ),
           new Container(
               padding: const EdgeInsets.all(100.0),
               alignment: Alignment.topCenter,
