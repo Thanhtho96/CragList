@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
+
+import 'package:craigslist/category_card.dart';
 
 void main() {
   runApp(new country_list());
@@ -50,9 +51,10 @@ class _MyHomePageState extends State<MyHomePage> {
                 color: Color.fromRGBO(73, 128, 249, 1), size: 40.0),
           ),
           new Center(
-              child: ListView(
-                  padding: EdgeInsets.only(left: 15, top: 81, right: 15),
-                  children: <Widget>[
+              child: Padding(
+            padding: EdgeInsets.only(left: 15, top: 81, right: 15),
+            child: Column(
+              children: <Widget>[
                 new Container(
                     height: 36,
                     child: new TextField(
@@ -90,7 +92,50 @@ class _MyHomePageState extends State<MyHomePage> {
                         fontSize: 25, fontFamily: "SFProDisplay-Bold"),
                   ),
                 ),
-              ])),
+              ],
+            ),
+          )),
+          Padding(
+            padding: EdgeInsets.only(top: 163),
+            child: new ListView.separated(
+              separatorBuilder: (context, index) => new Container(
+                height: 2.0,
+                color: Color.fromRGBO(246, 247, 249, 1),
+              ),
+              itemCount: 20,
+              itemBuilder: (context, index) => Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                mainAxisSize: MainAxisSize.max,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  GestureDetector(
+                    onTap: (){
+                      print("Container clicked");
+                    },
+                    child: Padding(
+                      padding: EdgeInsets.only(left: 15, top: 15, bottom: 17),
+                      child: InkWell(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => category_card()),
+                          );
+                        },
+                        child: Text(
+                          "Index $index",
+                          style: new TextStyle(
+                              fontSize: 20,
+                              color: Color.fromRGBO(37, 56, 88, 1),
+                              fontFamily: 'SFProDisplay-Regular'),
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          )
         ],
       ),
     );

@@ -65,9 +65,10 @@ class _MyHomePageState extends State<MyHomePage> {
                 ],
               )),
           new Center(
-              child: ListView(
-                  padding: EdgeInsets.only(left: 15, top: 287, right: 15),
-                  children: <Widget>[
+              child: Padding(
+            padding: EdgeInsets.only(left: 15, top: 287, right: 15),
+            child: Column(
+              children: <Widget>[
                 new Container(
                     height: 49,
                     child: new TextField(
@@ -80,68 +81,73 @@ class _MyHomePageState extends State<MyHomePage> {
                           focusedBorder: new OutlineInputBorder(
                               borderRadius:
                                   BorderRadius.all(Radius.circular(4)),
-                              borderSide: BorderSide(
-                                  color: Colors.white, width: 0.0)),
+                              borderSide:
+                                  BorderSide(color: Colors.white, width: 0.0)),
                           enabledBorder: new OutlineInputBorder(
                               borderRadius:
                                   BorderRadius.all(Radius.circular(4)),
-                              borderSide: BorderSide(
-                                  color: Colors.white, width: 0.0)),
+                              borderSide:
+                                  BorderSide(color: Colors.white, width: 0.0)),
                           hintText: 'user name / email',
                           filled: true,
                           fillColor: Color.fromRGBO(246, 247, 249, 1)),
                       style: new TextStyle(
                           fontSize: 16.0, fontFamily: "SFProDisplay"),
                     )),
-                new Padding(padding: EdgeInsets.only(top: 20)),
-                new Container(
-                    height: 49,
-                    child: new TextField(
-                      maxLengthEnforced: false,
-                      maxLines: null,
-                      obscureText: true,
-                      decoration: new InputDecoration(
-                          contentPadding:
-                              EdgeInsets.only(left: 15, top: 15, bottom: 15),
-                          focusedBorder: new OutlineInputBorder(
-                              borderRadius:
-                                  BorderRadius.all(Radius.circular(4)),
-                              borderSide: BorderSide(
-                                  color: Colors.white, width: 0.0)),
-                          enabledBorder: new OutlineInputBorder(
-                              borderRadius:
-                                  BorderRadius.all(Radius.circular(4)),
-                              borderSide: BorderSide(
-                                  color: Colors.white, width: 0.0)),
-                          hintText: 'password',
-                          filled: true,
-                          fillColor: Color.fromRGBO(246, 247, 249, 1)),
-                      style: new TextStyle(
-                          fontSize: 16.0, fontFamily: "SFProDisplay"),
-                    )),
-                new Padding(padding: EdgeInsets.only(top: 20)),
-                new ButtonTheme(
-                  padding: EdgeInsets.only(left: 16, right: 16),
-                  height: 50,
-                  minWidth: 345,
-                  buttonColor: Color.fromRGBO(73, 128, 249, 1),
-                  child: RaisedButton(
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => country_list()),
-                        );
-                      },
-                      child: new Text(
-                        "LOGIN",
+                Padding(
+                  padding: EdgeInsets.only(top: 20),
+                  child: new Container(
+                      height: 49,
+                      child: new TextField(
+                        maxLengthEnforced: false,
+                        maxLines: null,
+                        obscureText: true,
+                        decoration: new InputDecoration(
+                            contentPadding:
+                                EdgeInsets.only(left: 15, top: 15, bottom: 15),
+                            focusedBorder: new OutlineInputBorder(
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(4)),
+                                borderSide: BorderSide(
+                                    color: Colors.white, width: 0.0)),
+                            enabledBorder: new OutlineInputBorder(
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(4)),
+                                borderSide: BorderSide(
+                                    color: Colors.white, width: 0.0)),
+                            hintText: 'password',
+                            filled: true,
+                            fillColor: Color.fromRGBO(246, 247, 249, 1)),
                         style: new TextStyle(
-                            fontSize: 20.0,
-                            color: Colors.white,
-                            fontFamily: "SFProDisplay-Semibold"),
+                            fontSize: 16.0, fontFamily: "SFProDisplay"),
                       )),
                 ),
-              ])),
+                Padding(
+                  padding: EdgeInsets.only(top: 20, right: 1),
+                  child: new ButtonTheme(
+                    height: 50,
+                    minWidth: double.infinity,
+                    buttonColor: Color.fromRGBO(73, 128, 249, 1),
+                    child: RaisedButton(
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => country_list()),
+                          );
+                        },
+                        child: new Text(
+                          "LOGIN",
+                          style: new TextStyle(
+                              fontSize: 20.0,
+                              color: Colors.white,
+                              fontFamily: "SFProDisplay-Semibold"),
+                        )),
+                  ),
+                ),
+              ],
+            ),
+          )),
           new Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             mainAxisSize: MainAxisSize.max,
