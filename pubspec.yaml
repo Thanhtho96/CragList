@@ -45,6 +45,8 @@ flutter:
     - images/combined_shape.png
     - images/path_3.png
     - images/search.png
+    - images/group_2.png
+    - images/group_4.png
   # To add assets to your application, add an assets section, like this:
   # assets:
   #  - images/a_dot_burr.jpeg

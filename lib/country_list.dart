@@ -1,37 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
-import 'package:craigslist/category_card.dart';
-
-void main() {
-  debugPaintSizeEnabled = true;
-  runApp(new country_list());
-}
-
 class country_list extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return new MaterialApp(
-      title: 'Generated App',
-      theme: new ThemeData(
-        primarySwatch: Colors.blue,
-        primaryColor: const Color(0xFF2196f3),
-        accentColor: const Color(0xFF2196f3),
-        canvasColor: const Color(0xFFffffff),
-      ),
-      home: new MyHomePage(),
-    );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key}) : super(key: key);
-
-  @override
-  _MyHomePageState createState() => new _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
@@ -43,14 +13,13 @@ class _MyHomePageState extends State<MyHomePage> {
             child: new Text(
               "Country",
               style:
-                  new TextStyle(fontSize: 30, fontFamily: "SFProDisplay-Bold"),
+                  new TextStyle(fontSize: 30, letterSpacing: 0.44,fontFamily: "SFProDisplay-Bold"),
             ),
           ),
           new Container(
-            padding: EdgeInsets.only(top: 35, right: 15),
+            padding: EdgeInsets.only(top: 45, right: 15),
             alignment: Alignment.topRight,
-            child: new Icon(Icons.menu,
-                color: Color.fromRGBO(73, 128, 249, 1), size: 40.0),
+            child: new Image.asset("images/group_4.png", height: 16, width: 25,)
           ),
           new Center(
               child: Padding(
@@ -78,7 +47,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           fillColor: Color.fromRGBO(246, 247, 249, 1),
                           suffixIcon: Image.asset("images/search.png")),
                       style: new TextStyle(
-                          fontSize: 20.0, fontFamily: "SFProDisplay"),
+                          fontSize: 20.0, letterSpacing: 0.29,fontFamily: "SFProDisplay"),
                     )),
                 new Container(
                   padding: EdgeInsets.only(top: 25),
@@ -86,7 +55,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   child: new Text(
                     "India",
                     style: new TextStyle(
-                        fontSize: 25, fontFamily: "SFProDisplay-Bold"),
+                        fontSize: 25, letterSpacing: 0.37,fontFamily: "SFProDisplay-Bold"),
                   ),
                 ),
               ],
@@ -107,10 +76,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 child: FlatButton(
                   padding: EdgeInsets.only(left: 15),
                   onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => category_card()),
-                    );
+                    Navigator.pushNamed(context, '/third');
                   },
                   child: Container(
                     alignment: Alignment.centerLeft,
@@ -119,6 +85,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       "Index $index",
                       style: new TextStyle(
                           fontSize: 20,
+                          letterSpacing: 0.29,
                           color: Color.fromRGBO(37, 56, 88, 1),
                           fontFamily: 'SFProDisplay-Regular'),
                     ),
