@@ -54,7 +54,7 @@ class _MyHomePageState extends State<MyHomePage> {
             child: new Image.asset("images/path_3.png"),
           ),
           Column(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: <Widget>[
               Expanded(
                 child: new Container(

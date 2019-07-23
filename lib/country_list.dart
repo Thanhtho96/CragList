@@ -12,15 +12,20 @@ class country_list extends StatelessWidget {
             alignment: Alignment.topLeft,
             child: new Text(
               "Country",
-              style:
-                  new TextStyle(fontSize: 30, letterSpacing: 0.44,fontFamily: "SFProDisplay-Bold"),
+              style: new TextStyle(
+                  fontSize: 30,
+                  letterSpacing: 0.44,
+                  fontFamily: "SFProDisplay-Bold"),
             ),
           ),
           new Container(
-            padding: EdgeInsets.only(top: 45, right: 15),
-            alignment: Alignment.topRight,
-            child: new Image.asset("images/group_4.png", height: 16, width: 25,)
-          ),
+              padding: EdgeInsets.only(top: 45, right: 15),
+              alignment: Alignment.topRight,
+              child: new Image.asset(
+                "images/group_4.png",
+                height: 16,
+                width: 25,
+              )),
           new Center(
               child: Padding(
             padding: EdgeInsets.only(left: 15, top: 81, right: 15),
@@ -47,7 +52,9 @@ class country_list extends StatelessWidget {
                           fillColor: Color.fromRGBO(246, 247, 249, 1),
                           suffixIcon: Image.asset("images/search.png")),
                       style: new TextStyle(
-                          fontSize: 20.0, letterSpacing: 0.29,fontFamily: "SFProDisplay"),
+                          fontSize: 20.0,
+                          letterSpacing: 0.29,
+                          fontFamily: "SFProDisplay"),
                     )),
                 new Container(
                   padding: EdgeInsets.only(top: 25),
@@ -55,7 +62,9 @@ class country_list extends StatelessWidget {
                   child: new Text(
                     "India",
                     style: new TextStyle(
-                        fontSize: 25, letterSpacing: 0.37,fontFamily: "SFProDisplay-Bold"),
+                        fontSize: 25,
+                        letterSpacing: 0.37,
+                        fontFamily: "SFProDisplay-Bold"),
                   ),
                 ),
               ],
