@@ -125,8 +125,8 @@ class _MyHomePageState extends State<MyHomePage> {
                   child: new ButtonTheme(
                     height: 50,
                     minWidth: double.infinity,
-                    buttonColor: Color.fromRGBO(73, 128, 249, 1),
-                    child: RaisedButton(
+                    child: FlatButton(
+                      color: Color.fromRGBO(73, 128, 249, 1),
                         onPressed: () {
                           Navigator.push(
                             context,

@@ -104,18 +104,17 @@ class _MyHomePageState extends State<MyHomePage> {
               itemBuilder: (context, index) => ButtonTheme(
                 height: 55,
                 minWidth: double.infinity,
-                buttonColor: Colors.white,
-                child: RaisedButton(
+                child: FlatButton(
+                  padding: EdgeInsets.only(left: 15),
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(
-                          builder: (context) => category_card()),
+                      MaterialPageRoute(builder: (context) => category_card()),
                     );
                   },
                   child: Container(
-                    padding: EdgeInsets.only(top: 15, bottom: 17),
                     alignment: Alignment.centerLeft,
+                    padding: EdgeInsets.only(top: 15, bottom: 17),
                     child: Text(
                       "Index $index",
                       style: new TextStyle(
