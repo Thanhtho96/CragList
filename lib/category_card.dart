@@ -6,43 +6,46 @@ class category_card extends StatelessWidget {
     return new Scaffold(
       body: new Stack(
         children: <Widget>[
-          new GestureDetector(
-              onTap: () {
-                Navigator.pop(context);
-              },
-              child: new Row(
-                children: <Widget>[
-                  new Container(
-                    padding: const EdgeInsets.only(left: 15, top: 40),
-                    alignment: Alignment.topLeft,
-                    child: new Image.asset(
-                      "images/group_2.png",
-                      height: 24,
-                      width: 24,
-                    ),
-                  ),
-                  new Container(
-                    padding: EdgeInsets.only(left: 1, top: 41),
-                    alignment: Alignment.topLeft,
-                    child: new Text(
-                      "Country",
-                      style: new TextStyle(
-                          fontSize: 18,
-                          letterSpacing: 0.26,
-                          color: Color.fromRGBO(73, 128, 249, 1),
-                          fontFamily: "SFProDisplay-Regular"),
-                    ),
-                  ),
-                ],
-              )),
           new Container(
-              padding: EdgeInsets.only(top: 45, right: 15),
-              alignment: Alignment.topRight,
-              child: new Image.asset(
-                "images/group_4.png",
-                height: 16,
-                width: 25,
-              )),
+            padding: EdgeInsets.only(left: 15, top: 41, right: 15),
+            child: new Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              mainAxisSize: MainAxisSize.max,
+              children: <Widget>[
+                new GestureDetector(
+                    onTap: () {
+                      Navigator.pop(context);
+                    },
+                    child: new Row(
+                      children: <Widget>[
+                        new Container(
+                          alignment: Alignment.topLeft,
+                          child: new Image.asset(
+                            "images/group_2.png",
+                          ),
+                        ),
+                        new Container(
+                          alignment: Alignment.topLeft,
+                          child: new Text(
+                            "Country",
+                            style: new TextStyle(
+                                fontSize: 18,
+                                letterSpacing: 0.26,
+                                color: Color.fromRGBO(73, 128, 249, 1),
+                                fontFamily: "SFProDisplay-Regular"),
+                          ),
+                        ),
+                      ],
+                    )),
+                new Container(
+                    padding: EdgeInsets.only(top: 3),
+                    alignment: Alignment.topRight,
+                    child: new Image.asset(
+                      "images/group_4.png",
+                    )),
+              ],
+            ),
+          ),
           new Padding(
             padding: const EdgeInsets.only(left: 15, top: 84),
             child: new Column(
@@ -72,7 +75,7 @@ class category_card extends StatelessWidget {
           Padding(
             padding: EdgeInsets.only(top: 148),
             child: new GridView.count(
-              padding: EdgeInsets.only(top:10, bottom: 15),
+              padding: EdgeInsets.only(top: 10, bottom: 15),
               crossAxisCount: 2,
               mainAxisSpacing: 15,
               crossAxisSpacing: 15,
@@ -85,11 +88,12 @@ class category_card extends StatelessWidget {
                   ]),
                   child: new FlatButton(
                     shape: RoundedRectangleBorder(
-                        borderRadius:
-                            new BorderRadius.all(Radius.circular(10)),
+                        borderRadius: new BorderRadius.all(Radius.circular(10)),
                         side: new BorderSide(color: Colors.white)),
                     color: Colors.white,
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/fourth');
+                    },
                     child: new Column(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: <Widget>[
@@ -120,18 +124,19 @@ class category_card extends StatelessWidget {
                   ),
                 ),
                 new Container(
-                  padding: EdgeInsets.only( top: 10, right: 15),
+                  padding: EdgeInsets.only(top: 10, right: 15),
                   decoration: BoxDecoration(boxShadow: [
                     new BoxShadow(
                         color: Color.fromRGBO(0, 0, 0, 0.08), blurRadius: 20)
                   ]),
                   child: new FlatButton(
                     shape: RoundedRectangleBorder(
-                        borderRadius:
-                            new BorderRadius.all(Radius.circular(10)),
+                        borderRadius: new BorderRadius.all(Radius.circular(10)),
                         side: new BorderSide(color: Colors.white)),
                     color: Colors.white,
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/fourth');
+                    },
                     child: new Column(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: <Widget>[
@@ -169,11 +174,12 @@ class category_card extends StatelessWidget {
                   ]),
                   child: new FlatButton(
                     shape: RoundedRectangleBorder(
-                        borderRadius:
-                        new BorderRadius.all(Radius.circular(10)),
+                        borderRadius: new BorderRadius.all(Radius.circular(10)),
                         side: new BorderSide(color: Colors.white)),
                     color: Colors.white,
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/fourth');
+                    },
                     child: new Column(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: <Widget>[
@@ -211,11 +217,12 @@ class category_card extends StatelessWidget {
                   ]),
                   child: new FlatButton(
                     shape: RoundedRectangleBorder(
-                        borderRadius:
-                        new BorderRadius.all(Radius.circular(10)),
+                        borderRadius: new BorderRadius.all(Radius.circular(10)),
                         side: new BorderSide(color: Colors.white)),
                     color: Colors.white,
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/fourth');
+                    },
                     child: new Column(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: <Widget>[
@@ -253,11 +260,12 @@ class category_card extends StatelessWidget {
                   ]),
                   child: new FlatButton(
                     shape: RoundedRectangleBorder(
-                        borderRadius:
-                        new BorderRadius.all(Radius.circular(10)),
+                        borderRadius: new BorderRadius.all(Radius.circular(10)),
                         side: new BorderSide(color: Colors.white)),
                     color: Colors.white,
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/fourth');
+                    },
                     child: new Column(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: <Widget>[
@@ -295,11 +303,12 @@ class category_card extends StatelessWidget {
                   ]),
                   child: new FlatButton(
                     shape: RoundedRectangleBorder(
-                        borderRadius:
-                        new BorderRadius.all(Radius.circular(10)),
+                        borderRadius: new BorderRadius.all(Radius.circular(10)),
                         side: new BorderSide(color: Colors.white)),
                     color: Colors.white,
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/fourth');
+                    },
                     child: new Column(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: <Widget>[
