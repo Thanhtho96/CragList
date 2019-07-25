@@ -102,56 +102,316 @@ class list extends StatelessWidget {
               padding: EdgeInsets.all(0),
               children: <Widget>[
                 new Container(
-                  height: 100,
                   padding: EdgeInsets.only(left: 15, top: 10, right: 15),
                   decoration: BoxDecoration(boxShadow: [
                     new BoxShadow(
                         color: Color.fromRGBO(0, 0, 0, 0.08), blurRadius: 20)
                   ]),
-                  child: FlatButton(
-                      padding: EdgeInsets.all(10),
-                      shape: RoundedRectangleBorder(
+                  child: Container(
+                    height: 100,
+                    child: FlatButton(
+                        padding: EdgeInsets.all(10),
+                        shape: RoundedRectangleBorder(
                           borderRadius:
                               new BorderRadius.all(Radius.circular(10)),
-                          ),
-                      color: Colors.white,
-                      onPressed: () {Navigator.pushNamed(context, '/demo');},
-                      child: new Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        children: <Widget>[
-                          Expanded(
-                              child: new ClipRRect(
-                            borderRadius: new BorderRadius.circular(5.0),
-                            child: Image.asset(
-                              ("images/path_3.png"),
-                              height: 80.0,
-                              width: 80.0,
-                              fit: BoxFit.fill,
-                            ),
-                          )),
-                          Expanded(
-                            flex: 4,
-                            child: Stack(
-                              children: <Widget>[
-                                Container(
-                                  alignment: Alignment.topCenter,
-                                  padding: EdgeInsets.only(left: 10),
-                                  child: Text(
-                                    "Snowbirds-Mature, Reliable guy can drive your car To or From...",
-                                    style: TextStyle(
-                                        fontSize: 16,
-                                        letterSpacing: 0.44,
-                                        fontFamily: "SFProDisplay-Medium"),
+                        ),
+                        color: Colors.white,
+                        onPressed: () {
+                          Navigator.pushNamed(context, '/demo');
+                        },
+                        child: new Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          children: <Widget>[
+                            Container(
+                                padding: EdgeInsets.all(0),
+                                child: new ClipRRect(
+                                  borderRadius: new BorderRadius.circular(5.0),
+                                  child: Image.asset(
+                                    ("images/path_3.png"),
+                                    height: 80.0,
+                                    width: 80.0,
+                                    fit: BoxFit.fill,
                                   ),
-                                ),
-                                Container(
-
-                                ),
-                              ],
-                            ),
-                          )
-                        ],
-                      )),
+                                )),
+                            Expanded(
+                              child: Stack(
+                                children: <Widget>[
+                                  Container(
+                                    padding: EdgeInsets.only(left: 10),
+                                    child: Text(
+                                      "Snowbirds-Mature, Reliable guy can drive your car To or From...",
+                                      style: TextStyle(
+                                          fontSize: 16,
+                                          letterSpacing: 0.44,
+                                          fontFamily: "SFProDisplay-Medium"),
+                                    ),
+                                  ),
+                                  Container(
+                                    alignment: Alignment.bottomCenter,
+                                    padding:
+                                        EdgeInsets.only(left: 19, right: 143),
+                                    child: Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceBetween,
+                                      mainAxisSize: MainAxisSize.max,
+                                      children: <Widget>[
+                                        Image.asset("images/stared.png"),
+                                        Image.asset("images/shaped.png"),
+                                        Image.asset("images/forward_arrow.png"),
+                                      ],
+                                    ),
+                                  ),
+                                  Container(
+                                    alignment: Alignment.bottomRight,
+                                    child: Text(
+                                      "2hrs ago",
+                                      style: TextStyle(
+                                          fontSize: 12,
+                                          letterSpacing: 0.33,
+                                          color: Color.fromRGBO(0, 0, 0, 80),
+                                          fontFamily: "SFProDisplay-Regular"),
+                                    ),
+                                  )
+                                ],
+                              ),
+                            )
+                          ],
+                        )),
+                  ),
+                ),
+                new Container(
+                  padding: EdgeInsets.only(left: 15, top: 15, right: 15),
+                  decoration: BoxDecoration(boxShadow: [
+                    new BoxShadow(
+                        color: Color.fromRGBO(0, 0, 0, 0.08), blurRadius: 20)
+                  ]),
+                  child: Container(
+                    height: 100,
+                    child: FlatButton(
+                        padding: EdgeInsets.all(10),
+                        shape: RoundedRectangleBorder(
+                          borderRadius:
+                              new BorderRadius.all(Radius.circular(10)),
+                        ),
+                        color: Colors.white,
+                        onPressed: () {
+                          Navigator.pushNamed(context, '/demo');
+                        },
+                        child: new Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          children: <Widget>[
+                            Container(
+                                padding: EdgeInsets.all(0),
+                                child: new ClipRRect(
+                                  borderRadius: new BorderRadius.circular(5.0),
+                                  child: Image.asset(
+                                    ("images/path_3.png"),
+                                    height: 80.0,
+                                    width: 80.0,
+                                    fit: BoxFit.fill,
+                                  ),
+                                )),
+                            Expanded(
+                              child: Stack(
+                                children: <Widget>[
+                                  Container(
+                                    padding: EdgeInsets.only(left: 10),
+                                    child: Text(
+                                      "Yorkie Poodle Puppies",
+                                      style: TextStyle(
+                                          fontSize: 16,
+                                          letterSpacing: 0.44,
+                                          fontFamily: "SFProDisplay-Medium"),
+                                    ),
+                                  ),
+                                  Container(
+                                    alignment: Alignment.bottomCenter,
+                                    padding:
+                                        EdgeInsets.only(left: 19, right: 143),
+                                    child: Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceBetween,
+                                      mainAxisSize: MainAxisSize.max,
+                                      children: <Widget>[
+                                        Image.asset("images/star.png"),
+                                        Image.asset("images/shape.png"),
+                                        Image.asset("images/forward_arrow.png"),
+                                      ],
+                                    ),
+                                  ),
+                                  Container(
+                                    alignment: Alignment.bottomRight,
+                                    child: Text(
+                                      "5hrs ago",
+                                      style: TextStyle(
+                                          fontSize: 12,
+                                          letterSpacing: 0.33,
+                                          color: Color.fromRGBO(0, 0, 0, 80),
+                                          fontFamily: "SFProDisplay-Regular"),
+                                    ),
+                                  )
+                                ],
+                              ),
+                            )
+                          ],
+                        )),
+                  ),
+                ),
+                new Container(
+                  padding: EdgeInsets.only(left: 15, top: 15, right: 15),
+                  decoration: BoxDecoration(boxShadow: [
+                    new BoxShadow(
+                        color: Color.fromRGBO(0, 0, 0, 0.08), blurRadius: 20)
+                  ]),
+                  child: Container(
+                    height: 100,
+                    child: FlatButton(
+                        padding: EdgeInsets.all(10),
+                        shape: RoundedRectangleBorder(
+                          borderRadius:
+                              new BorderRadius.all(Radius.circular(10)),
+                        ),
+                        color: Colors.white,
+                        onPressed: () {
+                          Navigator.pushNamed(context, '/demo');
+                        },
+                        child: new Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          children: <Widget>[
+                            Container(
+                                padding: EdgeInsets.all(0),
+                                child: new ClipRRect(
+                                  borderRadius: new BorderRadius.circular(5.0),
+                                  child: Image.asset(
+                                    ("images/path_3.png"),
+                                    height: 80.0,
+                                    width: 80.0,
+                                    fit: BoxFit.fill,
+                                  ),
+                                )),
+                            Expanded(
+                              child: Stack(
+                                children: <Widget>[
+                                  Container(
+                                    padding: EdgeInsets.only(left: 10),
+                                    child: Text(
+                                      "AKC Golden Retriever litter of 5 males and a female pups…",
+                                      style: TextStyle(
+                                          fontSize: 16,
+                                          letterSpacing: 0.44,
+                                          fontFamily: "SFProDisplay-Medium"),
+                                    ),
+                                  ),
+                                  Container(
+                                    alignment: Alignment.bottomCenter,
+                                    padding:
+                                        EdgeInsets.only(left: 19, right: 143),
+                                    child: Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceBetween,
+                                      mainAxisSize: MainAxisSize.max,
+                                      children: <Widget>[
+                                        Image.asset("images/star.png"),
+                                        Image.asset("images/shape.png"),
+                                        Image.asset("images/forward_arrow.png"),
+                                      ],
+                                    ),
+                                  ),
+                                  Container(
+                                    alignment: Alignment.bottomRight,
+                                    child: Text(
+                                      "12hrs ago",
+                                      style: TextStyle(
+                                          fontSize: 12,
+                                          letterSpacing: 0.33,
+                                          color: Color.fromRGBO(0, 0, 0, 80),
+                                          fontFamily: "SFProDisplay-Regular"),
+                                    ),
+                                  )
+                                ],
+                              ),
+                            )
+                          ],
+                        )),
+                  ),
+                ),
+                new Container(
+                  padding: EdgeInsets.only(left: 15, top: 15, right: 15),
+                  decoration: BoxDecoration(boxShadow: [
+                    new BoxShadow(
+                        color: Color.fromRGBO(0, 0, 0, 0.08), blurRadius: 20)
+                  ]),
+                  child: Container(
+                    height: 100,
+                    child: FlatButton(
+                        padding: EdgeInsets.all(10),
+                        shape: RoundedRectangleBorder(
+                          borderRadius:
+                              new BorderRadius.all(Radius.circular(10)),
+                        ),
+                        color: Colors.white,
+                        onPressed: () {
+                          Navigator.pushNamed(context, '/demo');
+                        },
+                        child: new Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          children: <Widget>[
+                            Container(
+                                padding: EdgeInsets.all(0),
+                                child: new ClipRRect(
+                                  borderRadius: new BorderRadius.circular(5.0),
+                                  child: Image.asset(
+                                    ("images/path_3.png"),
+                                    height: 80.0,
+                                    width: 80.0,
+                                    fit: BoxFit.fill,
+                                  ),
+                                )),
+                            Expanded(
+                              child: Stack(
+                                children: <Widget>[
+                                  Container(
+                                    padding: EdgeInsets.only(left: 10),
+                                    child: Text(
+                                      "Sweethearts Child Care/Full time special for 2+yr. old…",
+                                      style: TextStyle(
+                                          fontSize: 16,
+                                          letterSpacing: 0.44,
+                                          fontFamily: "SFProDisplay-Medium"),
+                                    ),
+                                  ),
+                                  Container(
+                                    alignment: Alignment.bottomCenter,
+                                    padding:
+                                        EdgeInsets.only(left: 19, right: 143),
+                                    child: Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceBetween,
+                                      mainAxisSize: MainAxisSize.max,
+                                      children: <Widget>[
+                                        Image.asset("images/star.png"),
+                                        Image.asset("images/shape.png"),
+                                        Image.asset("images/forward_arrow.png"),
+                                      ],
+                                    ),
+                                  ),
+                                  Container(
+                                    alignment: Alignment.bottomRight,
+                                    child: Text(
+                                      "18hrs ago",
+                                      style: TextStyle(
+                                          fontSize: 12,
+                                          letterSpacing: 0.33,
+                                          color: Color.fromRGBO(0, 0, 0, 80),
+                                          fontFamily: "SFProDisplay-Regular"),
+                                    ),
+                                  )
+                                ],
+                              ),
+                            )
+                          ],
+                        )),
+                  ),
                 ),
               ],
             ),

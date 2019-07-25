@@ -73,9 +73,9 @@ class category_card extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: EdgeInsets.only(top: 158),
+            padding: EdgeInsets.only(top: 153),
             child: new GridView.count(
-              padding: EdgeInsets.only(top: 10, bottom: 15),
+              padding: EdgeInsets.only(top: 15, bottom: 15),
               crossAxisCount: 2,
               mainAxisSpacing: 15,
               crossAxisSpacing: 15,
