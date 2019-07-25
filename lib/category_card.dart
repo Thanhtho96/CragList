@@ -73,7 +73,7 @@ class category_card extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: EdgeInsets.only(top: 148),
+            padding: EdgeInsets.only(top: 158),
             child: new GridView.count(
               padding: EdgeInsets.only(top: 10, bottom: 15),
               crossAxisCount: 2,
@@ -89,7 +89,7 @@ class category_card extends StatelessWidget {
                   child: new FlatButton(
                     shape: RoundedRectangleBorder(
                         borderRadius: new BorderRadius.all(Radius.circular(10)),
-                        side: new BorderSide(color: Colors.white)),
+                        ),
                     color: Colors.white,
                     onPressed: () {
                       Navigator.pushNamed(context, '/fourth');
@@ -132,7 +132,7 @@ class category_card extends StatelessWidget {
                   child: new FlatButton(
                     shape: RoundedRectangleBorder(
                         borderRadius: new BorderRadius.all(Radius.circular(10)),
-                        side: new BorderSide(color: Colors.white)),
+                        ),
                     color: Colors.white,
                     onPressed: () {
                       Navigator.pushNamed(context, '/fourth');
@@ -175,7 +175,7 @@ class category_card extends StatelessWidget {
                   child: new FlatButton(
                     shape: RoundedRectangleBorder(
                         borderRadius: new BorderRadius.all(Radius.circular(10)),
-                        side: new BorderSide(color: Colors.white)),
+                        ),
                     color: Colors.white,
                     onPressed: () {
                       Navigator.pushNamed(context, '/fourth');
@@ -218,7 +218,7 @@ class category_card extends StatelessWidget {
                   child: new FlatButton(
                     shape: RoundedRectangleBorder(
                         borderRadius: new BorderRadius.all(Radius.circular(10)),
-                        side: new BorderSide(color: Colors.white)),
+                        ),
                     color: Colors.white,
                     onPressed: () {
                       Navigator.pushNamed(context, '/fourth');
@@ -261,7 +261,7 @@ class category_card extends StatelessWidget {
                   child: new FlatButton(
                     shape: RoundedRectangleBorder(
                         borderRadius: new BorderRadius.all(Radius.circular(10)),
-                        side: new BorderSide(color: Colors.white)),
+                        ),
                     color: Colors.white,
                     onPressed: () {
                       Navigator.pushNamed(context, '/fourth');
@@ -304,7 +304,7 @@ class category_card extends StatelessWidget {
                   child: new FlatButton(
                     shape: RoundedRectangleBorder(
                         borderRadius: new BorderRadius.all(Radius.circular(10)),
-                        side: new BorderSide(color: Colors.white)),
+                        ),
                     color: Colors.white,
                     onPressed: () {
                       Navigator.pushNamed(context, '/fourth');

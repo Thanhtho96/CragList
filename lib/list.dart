@@ -45,8 +45,8 @@ class list extends StatelessWidget {
                           )),
                       new Container(
                           child: new Image.asset(
-                            "images/group_4.png",
-                          )),
+                        "images/group_4.png",
+                      )),
                     ],
                   ),
                 ),
@@ -93,6 +93,66 @@ class list extends StatelessWidget {
                           letterSpacing: 0.29,
                           fontFamily: "SFProDisplay"),
                     )),
+              ],
+            ),
+          ),
+          Container(
+            padding: EdgeInsets.only(top: 186),
+            child: ListView(
+              padding: EdgeInsets.all(0),
+              children: <Widget>[
+                new Container(
+                  height: 100,
+                  padding: EdgeInsets.only(left: 15, top: 10, right: 15),
+                  decoration: BoxDecoration(boxShadow: [
+                    new BoxShadow(
+                        color: Color.fromRGBO(0, 0, 0, 0.08), blurRadius: 20)
+                  ]),
+                  child: FlatButton(
+                      padding: EdgeInsets.all(10),
+                      shape: RoundedRectangleBorder(
+                          borderRadius:
+                              new BorderRadius.all(Radius.circular(10)),
+                          ),
+                      color: Colors.white,
+                      onPressed: () {Navigator.pushNamed(context, '/demo');},
+                      child: new Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: <Widget>[
+                          Expanded(
+                              child: new ClipRRect(
+                            borderRadius: new BorderRadius.circular(5.0),
+                            child: Image.asset(
+                              ("images/path_3.png"),
+                              height: 80.0,
+                              width: 80.0,
+                              fit: BoxFit.fill,
+                            ),
+                          )),
+                          Expanded(
+                            flex: 4,
+                            child: Stack(
+                              children: <Widget>[
+                                Container(
+                                  alignment: Alignment.topCenter,
+                                  padding: EdgeInsets.only(left: 10),
+                                  child: Text(
+                                    "Snowbirds-Mature, Reliable guy can drive your car To or From...",
+                                    style: TextStyle(
+                                        fontSize: 16,
+                                        letterSpacing: 0.44,
+                                        fontFamily: "SFProDisplay-Medium"),
+                                  ),
+                                ),
+                                Container(
+
+                                ),
+                              ],
+                            ),
+                          )
+                        ],
+                      )),
+                ),
               ],
             ),
           ),
