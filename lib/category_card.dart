@@ -75,13 +75,13 @@ class category_card extends StatelessWidget {
           Padding(
             padding: EdgeInsets.only(top: 153),
             child: new GridView.count(
-              padding: EdgeInsets.only(top: 15, bottom: 15),
+              padding: EdgeInsets.all(15),
               crossAxisCount: 2,
               mainAxisSpacing: 15,
               crossAxisSpacing: 15,
               children: <Widget>[
                 new Container(
-                  padding: EdgeInsets.only(left: 15, top: 10),
+                  padding: EdgeInsets.only(top: 10),
                   decoration: BoxDecoration(boxShadow: [
                     new BoxShadow(
                         color: Color.fromRGBO(0, 0, 0, 0.08), blurRadius: 20)
@@ -124,7 +124,7 @@ class category_card extends StatelessWidget {
                   ),
                 ),
                 new Container(
-                  padding: EdgeInsets.only(top: 10, right: 15),
+                  padding: EdgeInsets.only(top: 10),
                   decoration: BoxDecoration(boxShadow: [
                     new BoxShadow(
                         color: Color.fromRGBO(0, 0, 0, 0.08), blurRadius: 20)
@@ -167,7 +167,6 @@ class category_card extends StatelessWidget {
                   ),
                 ),
                 new Container(
-                  padding: EdgeInsets.only(left: 15),
                   decoration: BoxDecoration(boxShadow: [
                     new BoxShadow(
                         color: Color.fromRGBO(0, 0, 0, 0.08), blurRadius: 20)
@@ -210,7 +209,6 @@ class category_card extends StatelessWidget {
                   ),
                 ),
                 new Container(
-                  padding: EdgeInsets.only(right: 15),
                   decoration: BoxDecoration(boxShadow: [
                     new BoxShadow(
                         color: Color.fromRGBO(0, 0, 0, 0.08), blurRadius: 20)
@@ -253,7 +251,6 @@ class category_card extends StatelessWidget {
                   ),
                 ),
                 new Container(
-                  padding: EdgeInsets.only(left: 15),
                   decoration: BoxDecoration(boxShadow: [
                     new BoxShadow(
                         color: Color.fromRGBO(0, 0, 0, 0.08), blurRadius: 20)
@@ -296,7 +293,6 @@ class category_card extends StatelessWidget {
                   ),
                 ),
                 new Container(
-                  padding: EdgeInsets.only(right: 15),
                   decoration: BoxDecoration(boxShadow: [
                     new BoxShadow(
                         color: Color.fromRGBO(0, 0, 0, 0.08), blurRadius: 20)

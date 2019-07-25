@@ -75,7 +75,7 @@ class country_list extends StatelessWidget {
             child: new ListView(padding: EdgeInsets.all(0), children: <Widget>[
               new StickyHeader(
                 header: new Container(
-                  height: 50.0,
+                  height: 55.0,
                   color: Colors.white,
                   padding: EdgeInsets.only(left: 15),
                   alignment: Alignment.centerLeft,

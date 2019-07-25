@@ -97,12 +97,12 @@ class list extends StatelessWidget {
             ),
           ),
           Container(
-            padding: EdgeInsets.only(top: 186),
+            padding: EdgeInsets.only(left: 15, top: 186, right: 15, bottom: 15),
             child: ListView(
               padding: EdgeInsets.all(0),
               children: <Widget>[
                 new Container(
-                  padding: EdgeInsets.only(left: 15, top: 10, right: 15),
+                  padding: EdgeInsets.only(top: 10),
                   decoration: BoxDecoration(boxShadow: [
                     new BoxShadow(
                         color: Color.fromRGBO(0, 0, 0, 0.08), blurRadius: 20)
@@ -180,7 +180,7 @@ class list extends StatelessWidget {
                   ),
                 ),
                 new Container(
-                  padding: EdgeInsets.only(left: 15, top: 15, right: 15),
+                  padding: EdgeInsets.only(top: 15),
                   decoration: BoxDecoration(boxShadow: [
                     new BoxShadow(
                         color: Color.fromRGBO(0, 0, 0, 0.08), blurRadius: 20)
@@ -258,7 +258,7 @@ class list extends StatelessWidget {
                   ),
                 ),
                 new Container(
-                  padding: EdgeInsets.only(left: 15, top: 15, right: 15),
+                  padding: EdgeInsets.only(top: 15),
                   decoration: BoxDecoration(boxShadow: [
                     new BoxShadow(
                         color: Color.fromRGBO(0, 0, 0, 0.08), blurRadius: 20)
@@ -336,7 +336,7 @@ class list extends StatelessWidget {
                   ),
                 ),
                 new Container(
-                  padding: EdgeInsets.only(left: 15, top: 15, right: 15),
+                  padding: EdgeInsets.only(top: 15),
                   decoration: BoxDecoration(boxShadow: [
                     new BoxShadow(
                         color: Color.fromRGBO(0, 0, 0, 0.08), blurRadius: 20)
