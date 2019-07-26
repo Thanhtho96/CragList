@@ -117,7 +117,7 @@ class list extends StatelessWidget {
                         ),
                         color: Colors.white,
                         onPressed: () {
-                          Navigator.pushNamed(context, '/demo');
+                          Navigator.pushNamed(context, '/fifth');
                         },
                         child: new Row(
                           mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -195,7 +195,7 @@ class list extends StatelessWidget {
                         ),
                         color: Colors.white,
                         onPressed: () {
-                          Navigator.pushNamed(context, '/demo');
+                          Navigator.pushNamed(context, '/fifth');
                         },
                         child: new Row(
                           mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -273,7 +273,7 @@ class list extends StatelessWidget {
                         ),
                         color: Colors.white,
                         onPressed: () {
-                          Navigator.pushNamed(context, '/demo');
+                          Navigator.pushNamed(context, '/fifth');
                         },
                         child: new Row(
                           mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -351,7 +351,7 @@ class list extends StatelessWidget {
                         ),
                         color: Colors.white,
                         onPressed: () {
-                          Navigator.pushNamed(context, '/demo');
+                          Navigator.pushNamed(context, '/fifth');
                         },
                         child: new Row(
                           mainAxisAlignment: MainAxisAlignment.spaceAround,

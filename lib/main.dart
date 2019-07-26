@@ -5,6 +5,7 @@ import 'package:url_launcher/url_launcher.dart';
 import 'package:craigslist/country_list.dart';
 import 'package:craigslist/category_card.dart';
 import 'package:craigslist/list.dart';
+import 'detailed.dart';
 
 void main() {
   // this line remove status bar
@@ -24,6 +25,7 @@ class MyApp extends StatelessWidget {
         '/second': (context) => country_list(),
         '/third': (context) => category_card(),
         '/fourth': (context) => list(),
+        "/fifth": (context) => detailed(),
       },
       title: "Generated App",
       theme: new ThemeData(
@@ -46,9 +48,8 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   @override
-  Widget build(
-      BuildContext context,
-      ) {
+  Widget build(BuildContext context) {
+    var contextWidth = MediaQuery.of(context).size.width;
     return new Scaffold(body: LayoutBuilder(builder: (context, constraints) {
       return SingleChildScrollView(
         child: ConstrainedBox(
@@ -58,7 +59,11 @@ class _MyHomePageState extends State<MyHomePage> {
             child: Stack(
               children: <Widget>[
                 new Container(
-                  child: new Image.asset("images/path_3.png"),
+                  child: new Image.asset(
+                    "images/path_3.png",
+//                    width: contextWidth * 0.57,
+//                    fit: BoxFit.fill,
+                  ),
                 ),
                 new Column(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -80,7 +85,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                           fontSize: 30.0,
                                           letterSpacing: 2.46,
                                           color:
-                                          Color.fromRGBO(73, 128, 249, 1),
+                                              Color.fromRGBO(73, 128, 249, 1),
                                           fontFamily: "SFProDisplay-Regular"),
                                     ))
                               ],
@@ -116,7 +121,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                     hintText: 'user name / email',
                                     filled: true,
                                     fillColor:
-                                    Color.fromRGBO(246, 247, 249, 1)),
+                                        Color.fromRGBO(246, 247, 249, 1)),
                                 style: new TextStyle(
                                     fontSize: 16.0,
                                     letterSpacing: 0.59,
@@ -146,7 +151,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                       hintText: 'password',
                                       filled: true,
                                       fillColor:
-                                      Color.fromRGBO(246, 247, 249, 1)),
+                                          Color.fromRGBO(246, 247, 249, 1)),
                                   style: new TextStyle(
                                       fontSize: 16.0,
                                       letterSpacing: 0.59,
@@ -191,7 +196,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                           letterSpacing: 0.59,
                                           fontFamily: "SFProDisplay-Regular",
                                           color:
-                                          Color.fromRGBO(73, 128, 249, 1))),
+                                              Color.fromRGBO(73, 128, 249, 1))),
                                   onTap: () => launch(
                                       'https://handsomeman.herokuapp.com/api'))),
                           new Container(
@@ -203,7 +208,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                         letterSpacing: 0.59,
                                         fontFamily: "SFProDisplay-Regular",
                                         color:
-                                        Color.fromRGBO(73, 128, 249, 1))),
+                                            Color.fromRGBO(73, 128, 249, 1))),
                                 onTap: () => launch(
                                     'https://handsomeman.herokuapp.com/api')),
                           ),

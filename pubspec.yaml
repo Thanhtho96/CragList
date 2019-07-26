@@ -60,6 +60,7 @@ flutter:
     - images/shaped.png
     - images/star.png
     - images/stared.png
+    - images/close.png
   # To add assets to your application, add an assets section, like this:
   # assets:
   #  - images/a_dot_burr.jpeg
