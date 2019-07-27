@@ -178,7 +178,7 @@ class _ListState extends State<list> {
                                   Container(
                                     alignment: Alignment.bottomCenter,
                                     padding: EdgeInsets.only(
-                                        top: 62, right: 143, bottom: 0),
+                                        left :9, top: 62, right: 143, bottom: 0),
                                     child: Row(
 //                                      mainAxisAlignment:
 //                                          MainAxisAlignment.spaceEvenly,
@@ -277,7 +277,7 @@ class _ListState extends State<list> {
                                   Container(
                                     alignment: Alignment.bottomCenter,
                                     padding:
-                                        EdgeInsets.only(top: 62, right: 143),
+                                        EdgeInsets.only(left :9,top: 62, right: 143),
                                     child: Row(
                                       mainAxisAlignment:
                                           MainAxisAlignment.spaceBetween,
@@ -361,7 +361,7 @@ class _ListState extends State<list> {
                                   Container(
                                     alignment: Alignment.bottomCenter,
                                     padding:
-                                        EdgeInsets.only(top: 62, right: 143),
+                                        EdgeInsets.only(left :9,top: 62, right: 143),
                                     child: Row(
                                       mainAxisAlignment:
                                           MainAxisAlignment.spaceBetween,
@@ -446,7 +446,7 @@ class _ListState extends State<list> {
                                   Container(
                                     alignment: Alignment.bottomCenter,
                                     padding:
-                                        EdgeInsets.only(top: 62, right: 143),
+                                        EdgeInsets.only(left :9,top: 62, right: 143),
                                     child: Row(
                                       mainAxisAlignment:
                                           MainAxisAlignment.spaceBetween,
