@@ -30,7 +30,7 @@ class detailed extends StatelessWidget {
             ],
           ),
           Container(
-            padding: EdgeInsets.only(left: 15, top: 15, right: 15),
+            padding: EdgeInsets.only(left: 5, top: 15, right: 15),
             child: Row(
               children: <Widget>[
                 new Expanded(
@@ -38,9 +38,9 @@ class detailed extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     mainAxisSize: MainAxisSize.max,
                     children: <Widget>[
-                      Image.asset("images/stared.png"),
-                      Image.asset("images/shaped.png"),
-                      Image.asset("images/forward_arrow.png"),
+                      Expanded(child: Image.asset("images/stared.png")),
+                      Expanded(child: Image.asset("images/shaped.png")),
+                      Expanded(child: Image.asset("images/forward_arrow.png")),
                     ],
                   ),
                 ),
@@ -62,7 +62,7 @@ class detailed extends StatelessWidget {
             ),
           ),
           Container(
-            padding: EdgeInsets.only(left: 15, top: 21.1, right: 15),
+            padding: EdgeInsets.only(left: 15, top: 15, right: 15),
             child: Text(
               "Snowbirds-Mature, Reliable guy can drive your car To or From Florida",
               style: TextStyle(

@@ -8,6 +8,7 @@ class category_card extends StatelessWidget {
         children: <Widget>[
           new Container(
             padding: EdgeInsets.only(left: 15, top: 41, right: 15),
+//            height: 24,
             child: new Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               mainAxisSize: MainAxisSize.max,
@@ -25,6 +26,7 @@ class category_card extends StatelessWidget {
                           ),
                         ),
                         new Container(
+                          padding: EdgeInsets.only(left: 5),
                           alignment: Alignment.topLeft,
                           child: new Text(
                             "Country",

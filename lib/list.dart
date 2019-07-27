@@ -60,6 +60,7 @@ class _ListState extends State<list> {
                                 ),
                               ),
                               new Container(
+                                padding: EdgeInsets.only(left: 5),
                                 child: new Text(
                                   "Category",
                                   style: new TextStyle(
@@ -125,12 +126,12 @@ class _ListState extends State<list> {
             ),
           ),
           Container(
-            padding: EdgeInsets.only(left: 15, top: 186, right: 15, bottom: 15),
+            padding: EdgeInsets.only(top: 186),
             child: ListView(
               padding: EdgeInsets.all(0),
               children: <Widget>[
                 new Container(
-                  padding: EdgeInsets.only(top: 10),
+                  padding: EdgeInsets.only(left: 15, top: 10, right: 15),
                   decoration: BoxDecoration(boxShadow: [
                     new BoxShadow(
                         color: Color.fromRGBO(0, 0, 0, 0.08), blurRadius: 20)
@@ -176,29 +177,37 @@ class _ListState extends State<list> {
                                   ),
                                   Container(
                                     alignment: Alignment.bottomCenter,
-                                    padding:
-                                        EdgeInsets.only(left: 19, right: 143),
+                                    padding: EdgeInsets.only(
+                                        top: 62, right: 143, bottom: 0),
                                     child: Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceBetween,
-                                      mainAxisSize: MainAxisSize.max,
+//                                      mainAxisAlignment:
+//                                          MainAxisAlignment.spaceEvenly,
+//                                      mainAxisSize: MainAxisSize.min,
                                       children: <Widget>[
-                                        GestureDetector(
+                                        Expanded(
+                                          child: GestureDetector(
 //                                          key: ,
-                                          onTap: _toggleStar,
-                                          child: _isStared
-                                              ? Image.asset("images/stared.png")
-                                              : new Image.asset(
-                                                  "images/star.png"),
+                                            onTap: _toggleStar,
+                                            child: _isStared
+                                                ? Image.asset(
+                                                    "images/stared.png")
+                                                : new Image.asset(
+                                                    "images/star.png"),
+                                          ),
                                         ),
-                                        GestureDetector(
-                                          onTap: _toggleFavorite,
-                                          child: _isFavorited
-                                              ? Image.asset("images/shaped.png")
-                                              : new Image.asset(
-                                                  "images/shape.png"),
+                                        Expanded(
+                                          child: GestureDetector(
+                                            onTap: _toggleFavorite,
+                                            child: _isFavorited
+                                                ? Image.asset(
+                                                    "images/shaped.png")
+                                                : new Image.asset(
+                                                    "images/shape.png"),
+                                          ),
                                         ),
-                                        Image.asset("images/forward_arrow.png"),
+                                        Expanded(
+                                            child: Image.asset(
+                                                "images/forward_arrow.png")),
                                       ],
                                     ),
                                   ),
@@ -221,7 +230,7 @@ class _ListState extends State<list> {
                   ),
                 ),
                 new Container(
-                  padding: EdgeInsets.only(top: 15),
+                  padding: EdgeInsets.only(left: 15, top: 15, right: 15),
                   decoration: BoxDecoration(boxShadow: [
                     new BoxShadow(
                         color: Color.fromRGBO(0, 0, 0, 0.08), blurRadius: 20)
@@ -268,15 +277,21 @@ class _ListState extends State<list> {
                                   Container(
                                     alignment: Alignment.bottomCenter,
                                     padding:
-                                        EdgeInsets.only(left: 19, right: 143),
+                                        EdgeInsets.only(top: 62, right: 143),
                                     child: Row(
                                       mainAxisAlignment:
                                           MainAxisAlignment.spaceBetween,
                                       mainAxisSize: MainAxisSize.max,
                                       children: <Widget>[
-                                        Image.asset("images/star.png"),
-                                        Image.asset("images/shape.png"),
-                                        Image.asset("images/forward_arrow.png"),
+                                        Expanded(
+                                            child:
+                                                Image.asset("images/star.png")),
+                                        Expanded(
+                                            child: Image.asset(
+                                                "images/shape.png")),
+                                        Expanded(
+                                            child: Image.asset(
+                                                "images/forward_arrow.png")),
                                       ],
                                     ),
                                   ),
@@ -299,7 +314,7 @@ class _ListState extends State<list> {
                   ),
                 ),
                 new Container(
-                  padding: EdgeInsets.only(top: 15),
+                  padding: EdgeInsets.only(left: 15, top: 15, right: 15),
                   decoration: BoxDecoration(boxShadow: [
                     new BoxShadow(
                         color: Color.fromRGBO(0, 0, 0, 0.08), blurRadius: 20)
@@ -346,15 +361,21 @@ class _ListState extends State<list> {
                                   Container(
                                     alignment: Alignment.bottomCenter,
                                     padding:
-                                        EdgeInsets.only(left: 19, right: 143),
+                                        EdgeInsets.only(top: 62, right: 143),
                                     child: Row(
                                       mainAxisAlignment:
                                           MainAxisAlignment.spaceBetween,
                                       mainAxisSize: MainAxisSize.max,
                                       children: <Widget>[
-                                        Image.asset("images/star.png"),
-                                        Image.asset("images/shape.png"),
-                                        Image.asset("images/forward_arrow.png"),
+                                        Expanded(
+                                            child:
+                                                Image.asset("images/star.png")),
+                                        Expanded(
+                                            child: Image.asset(
+                                                "images/shape.png")),
+                                        Expanded(
+                                            child: Image.asset(
+                                                "images/forward_arrow.png")),
                                       ],
                                     ),
                                   ),
@@ -377,7 +398,8 @@ class _ListState extends State<list> {
                   ),
                 ),
                 new Container(
-                  padding: EdgeInsets.only(top: 15),
+                  padding:
+                      EdgeInsets.only(left: 15, top: 15, right: 15, bottom: 15),
                   decoration: BoxDecoration(boxShadow: [
                     new BoxShadow(
                         color: Color.fromRGBO(0, 0, 0, 0.08), blurRadius: 20)
@@ -424,15 +446,21 @@ class _ListState extends State<list> {
                                   Container(
                                     alignment: Alignment.bottomCenter,
                                     padding:
-                                        EdgeInsets.only(left: 19, right: 143),
+                                        EdgeInsets.only(top: 62, right: 143),
                                     child: Row(
                                       mainAxisAlignment:
                                           MainAxisAlignment.spaceBetween,
                                       mainAxisSize: MainAxisSize.max,
                                       children: <Widget>[
-                                        Image.asset("images/star.png"),
-                                        Image.asset("images/shape.png"),
-                                        Image.asset("images/forward_arrow.png"),
+                                        Expanded(
+                                            child:
+                                                Image.asset("images/star.png")),
+                                        Expanded(
+                                            child: Image.asset(
+                                                "images/shape.png")),
+                                        Expanded(
+                                            child: Image.asset(
+                                                "images/forward_arrow.png")),
                                       ],
                                     ),
                                   ),

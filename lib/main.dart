@@ -1,10 +1,10 @@
+import 'package:craigslist/category_card.dart';
+import 'package:craigslist/country_list.dart';
+import 'package:craigslist/list.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-import 'package:craigslist/country_list.dart';
-import 'package:craigslist/category_card.dart';
-import 'package:craigslist/list.dart';
 import 'detailed.dart';
 
 void main() {
@@ -55,8 +55,8 @@ class _MyHomePageState extends State<MyHomePage> {
     return new Scaffold(body: LayoutBuilder(builder: (context, constraints) {
       return SingleChildScrollView(
         child: ConstrainedBox(
-          constraints: BoxConstraints(
-              minWidth: contextWidth, minHeight: contextHeight),
+          constraints:
+              BoxConstraints(minWidth: contextWidth, minHeight: contextHeight),
           child: IntrinsicHeight(
             child: Stack(
               children: <Widget>[
@@ -187,7 +187,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                     Expanded(
                       child: Container(
-                        padding: EdgeInsets.only(top:10, bottom: 10),
+                        padding: EdgeInsets.only(top: 10, bottom: 10),
                         height: contextHeight / 3,
                         child: new Column(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -201,8 +201,8 @@ class _MyHomePageState extends State<MyHomePage> {
                                             fontSize: 16,
                                             letterSpacing: 0.59,
                                             fontFamily: "SFProDisplay-Regular",
-                                            color:
-                                                Color.fromRGBO(73, 128, 249, 1))),
+                                            color: Color.fromRGBO(
+                                                73, 128, 249, 1))),
                                     onTap: () => launch(
                                         'https://handsomeman.herokuapp.com/api'))),
                             new Container(
