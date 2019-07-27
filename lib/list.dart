@@ -1,6 +1,34 @@
 import 'package:flutter/material.dart';
 
-class list extends StatelessWidget {
+class list extends StatefulWidget {
+  @override
+  _ListState createState() => new _ListState();
+}
+
+class _ListState extends State<list> {
+  bool _isStared = true;
+  bool _isFavorited = true;
+
+  void _toggleFavorite() {
+    setState(() {
+      if (_isFavorited) {
+        _isFavorited = false;
+      } else {
+        _isFavorited = true;
+      }
+    });
+  }
+
+  void _toggleStar() {
+    setState(() {
+      if (_isStared) {
+        _isStared = false;
+      } else {
+        _isStared = true;
+      }
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -155,8 +183,21 @@ class list extends StatelessWidget {
                                           MainAxisAlignment.spaceBetween,
                                       mainAxisSize: MainAxisSize.max,
                                       children: <Widget>[
-                                        Image.asset("images/stared.png"),
-                                        Image.asset("images/shaped.png"),
+                                        GestureDetector(
+//                                          key: ,
+                                          onTap: _toggleStar,
+                                          child: _isStared
+                                              ? Image.asset("images/stared.png")
+                                              : new Image.asset(
+                                                  "images/star.png"),
+                                        ),
+                                        GestureDetector(
+                                          onTap: _toggleFavorite,
+                                          child: _isFavorited
+                                              ? Image.asset("images/shaped.png")
+                                              : new Image.asset(
+                                                  "images/shape.png"),
+                                        ),
                                         Image.asset("images/forward_arrow.png"),
                                       ],
                                     ),

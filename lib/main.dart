@@ -50,11 +50,13 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     var contextWidth = MediaQuery.of(context).size.width;
+    var contextHeight = MediaQuery.of(context).size.height;
+
     return new Scaffold(body: LayoutBuilder(builder: (context, constraints) {
       return SingleChildScrollView(
         child: ConstrainedBox(
           constraints: BoxConstraints(
-              minWidth: constraints.maxWidth, minHeight: constraints.maxHeight),
+              minWidth: contextWidth, minHeight: contextHeight),
           child: IntrinsicHeight(
             child: Stack(
               children: <Widget>[
@@ -68,30 +70,32 @@ class _MyHomePageState extends State<MyHomePage> {
                 new Column(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: <Widget>[
-                    new Container(
-                      height: constraints.maxHeight / 3,
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: <Widget>[
-                          Container(
-                            child: new Column(
-                              children: <Widget>[
-                                new Image.asset("images/combined_shape.png"),
-                                new Container(
-                                    padding: EdgeInsets.only(top: 15),
-                                    child: new Text(
-                                      "Craigslist",
-                                      style: new TextStyle(
-                                          fontSize: 30.0,
-                                          letterSpacing: 2.46,
-                                          color:
-                                              Color.fromRGBO(73, 128, 249, 1),
-                                          fontFamily: "SFProDisplay-Regular"),
-                                    ))
-                              ],
-                            ),
-                          )
-                        ],
+                    Expanded(
+                      child: new Container(
+                        height: contextHeight / 3,
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: <Widget>[
+                            Container(
+                              child: new Column(
+                                children: <Widget>[
+                                  new Image.asset("images/combined_shape.png"),
+                                  new Container(
+                                      padding: EdgeInsets.only(top: 15),
+                                      child: new Text(
+                                        "Craigslist",
+                                        style: new TextStyle(
+                                            fontSize: 30.0,
+                                            letterSpacing: 2.46,
+                                            color:
+                                                Color.fromRGBO(73, 128, 249, 1),
+                                            fontFamily: "SFProDisplay-Regular"),
+                                      ))
+                                ],
+                              ),
+                            )
+                          ],
+                        ),
                       ),
                     ),
                     Container(
@@ -181,16 +185,30 @@ class _MyHomePageState extends State<MyHomePage> {
                         ],
                       ),
                     ),
-                    Container(
-                      height: constraints.maxHeight / 3,
-                      child: new Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: <Widget>[
-                          new Container(
-                              padding: EdgeInsets.only(right: 15),
-                              alignment: Alignment.topRight,
+                    Expanded(
+                      child: Container(
+                        padding: EdgeInsets.only(top:10, bottom: 10),
+                        height: contextHeight / 3,
+                        child: new Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: <Widget>[
+                            new Container(
+                                padding: EdgeInsets.only(right: 15),
+                                alignment: Alignment.topRight,
+                                child: new InkWell(
+                                    child: new Text('Forgot Password?',
+                                        style: new TextStyle(
+                                            fontSize: 16,
+                                            letterSpacing: 0.59,
+                                            fontFamily: "SFProDisplay-Regular",
+                                            color:
+                                                Color.fromRGBO(73, 128, 249, 1))),
+                                    onTap: () => launch(
+                                        'https://handsomeman.herokuapp.com/api'))),
+                            new Container(
+                              alignment: Alignment.center,
                               child: new InkWell(
-                                  child: new Text('Forgot Password?',
+                                  child: new Text('Need an account? Click Here',
                                       style: new TextStyle(
                                           fontSize: 16,
                                           letterSpacing: 0.59,
@@ -198,33 +216,22 @@ class _MyHomePageState extends State<MyHomePage> {
                                           color:
                                               Color.fromRGBO(73, 128, 249, 1))),
                                   onTap: () => launch(
-                                      'https://handsomeman.herokuapp.com/api'))),
-                          new Container(
-                            alignment: Alignment.center,
-                            child: new InkWell(
-                                child: new Text('Need an account? Click Here',
-                                    style: new TextStyle(
-                                        fontSize: 16,
-                                        letterSpacing: 0.59,
-                                        fontFamily: "SFProDisplay-Regular",
-                                        color:
-                                            Color.fromRGBO(73, 128, 249, 1))),
-                                onTap: () => launch(
-                                    'https://handsomeman.herokuapp.com/api')),
-                          ),
-                          new Container(
-                              alignment: Alignment.bottomCenter,
-                              child: new InkWell(
-                                child: new Text("FAQ - Privacy Policy",
-                                    style: new TextStyle(
-                                        fontSize: 14,
-                                        letterSpacing: 0.52,
-                                        fontFamily: "SFProDisplay-Regular",
-                                        color: Colors.black)),
-                                onTap: () => launch(
-                                    'https://handsomeman.herokuapp.com/api'),
-                              ))
-                        ],
+                                      'https://handsomeman.herokuapp.com/api')),
+                            ),
+                            new Container(
+                                alignment: Alignment.bottomCenter,
+                                child: new InkWell(
+                                  child: new Text("FAQ - Privacy Policy",
+                                      style: new TextStyle(
+                                          fontSize: 14,
+                                          letterSpacing: 0.52,
+                                          fontFamily: "SFProDisplay-Regular",
+                                          color: Colors.black)),
+                                  onTap: () => launch(
+                                      'https://handsomeman.herokuapp.com/api'),
+                                ))
+                          ],
+                        ),
                       ),
                     )
                   ],
