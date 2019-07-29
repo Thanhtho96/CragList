@@ -176,7 +176,7 @@ class _ListState extends State<list> {
                                   ),
                                   Container(
                                     padding: EdgeInsets.only(
-                                        left :9, top: 62, bottom: 0),
+                                        left: 9, top: 62, bottom: 0),
                                     child: Row(
                                       children: <Widget>[
                                         Expanded(
@@ -213,21 +213,22 @@ class _ListState extends State<list> {
                                         ),
                                         Expanded(
                                           child: Container(
-                                          alignment: Alignment.bottomRight,
+                                            alignment: Alignment.bottomRight,
                                             child: Text(
                                               "2hrs ago",
                                               style: TextStyle(
                                                   fontSize: 12,
                                                   letterSpacing: 0.33,
-                                                  color: Color.fromRGBO(0, 0, 0, 80),
-                                                  fontFamily: "SFProDisplay-Regular"),
+                                                  color: Color.fromRGBO(
+                                                      0, 0, 0, 80),
+                                                  fontFamily:
+                                                      "SFProDisplay-Regular"),
                                             ),
                                           ),
                                         )
                                       ],
                                     ),
                                   ),
-
                                 ],
                               ),
                             )
@@ -247,7 +248,7 @@ class _ListState extends State<list> {
                         padding: EdgeInsets.all(10),
                         shape: RoundedRectangleBorder(
                           borderRadius:
-                          new BorderRadius.all(Radius.circular(10)),
+                              new BorderRadius.all(Radius.circular(10)),
                         ),
                         color: Colors.white,
                         onPressed: () {
@@ -281,7 +282,7 @@ class _ListState extends State<list> {
                                   ),
                                   Container(
                                     padding: EdgeInsets.only(
-                                        left :9, top: 62, bottom: 0),
+                                        left: 9, top: 62, bottom: 0),
                                     child: Row(
                                       children: <Widget>[
                                         Expanded(
@@ -311,15 +312,16 @@ class _ListState extends State<list> {
                                               style: TextStyle(
                                                   fontSize: 12,
                                                   letterSpacing: 0.33,
-                                                  color: Color.fromRGBO(0, 0, 0, 80),
-                                                  fontFamily: "SFProDisplay-Regular"),
+                                                  color: Color.fromRGBO(
+                                                      0, 0, 0, 80),
+                                                  fontFamily:
+                                                      "SFProDisplay-Regular"),
                                             ),
                                           ),
                                         )
                                       ],
                                     ),
                                   ),
-
                                 ],
                               ),
                             )
@@ -339,7 +341,7 @@ class _ListState extends State<list> {
                         padding: EdgeInsets.all(10),
                         shape: RoundedRectangleBorder(
                           borderRadius:
-                          new BorderRadius.all(Radius.circular(10)),
+                              new BorderRadius.all(Radius.circular(10)),
                         ),
                         color: Colors.white,
                         onPressed: () {
@@ -373,7 +375,7 @@ class _ListState extends State<list> {
                                   ),
                                   Container(
                                     padding: EdgeInsets.only(
-                                        left :9, top: 62, bottom: 0),
+                                        left: 9, top: 62, bottom: 0),
                                     child: Row(
                                       children: <Widget>[
                                         Expanded(
@@ -403,15 +405,16 @@ class _ListState extends State<list> {
                                               style: TextStyle(
                                                   fontSize: 12,
                                                   letterSpacing: 0.33,
-                                                  color: Color.fromRGBO(0, 0, 0, 80),
-                                                  fontFamily: "SFProDisplay-Regular"),
+                                                  color: Color.fromRGBO(
+                                                      0, 0, 0, 80),
+                                                  fontFamily:
+                                                      "SFProDisplay-Regular"),
                                             ),
                                           ),
                                         )
                                       ],
                                     ),
                                   ),
-
                                 ],
                               ),
                             )
@@ -431,7 +434,7 @@ class _ListState extends State<list> {
                         padding: EdgeInsets.all(10),
                         shape: RoundedRectangleBorder(
                           borderRadius:
-                          new BorderRadius.all(Radius.circular(10)),
+                              new BorderRadius.all(Radius.circular(10)),
                         ),
                         color: Colors.white,
                         onPressed: () {
@@ -465,7 +468,7 @@ class _ListState extends State<list> {
                                   ),
                                   Container(
                                     padding: EdgeInsets.only(
-                                        left :9, top: 62, bottom: 0),
+                                        left: 9, top: 62, bottom: 0),
                                     child: Row(
                                       children: <Widget>[
                                         Expanded(
@@ -495,15 +498,16 @@ class _ListState extends State<list> {
                                               style: TextStyle(
                                                   fontSize: 12,
                                                   letterSpacing: 0.33,
-                                                  color: Color.fromRGBO(0, 0, 0, 80),
-                                                  fontFamily: "SFProDisplay-Regular"),
+                                                  color: Color.fromRGBO(
+                                                      0, 0, 0, 80),
+                                                  fontFamily:
+                                                      "SFProDisplay-Regular"),
                                             ),
                                           ),
                                         )
                                       ],
                                     ),
                                   ),
-
                                 ],
                               ),
                             )

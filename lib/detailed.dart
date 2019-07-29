@@ -3,7 +3,10 @@ import 'package:flutter/material.dart';
 class detailed extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    var contextWidth = MediaQuery.of(context).size.width;
+    var contextWidth = MediaQuery
+        .of(context)
+        .size
+        .width;
 
     return Scaffold(
       body: new Column(
@@ -12,11 +15,11 @@ class detailed extends StatelessWidget {
             children: <Widget>[
               Container(
                   child: Image.asset(
-                "images/path_3.png",
-                width: contextWidth,
-                height: contextWidth - 124,
-                fit: BoxFit.fill,
-              )),
+                    "images/path_3.png",
+                    width: contextWidth,
+                    height: contextWidth - 124,
+                    fit: BoxFit.fill,
+                  )),
               GestureDetector(
                 onTap: () {
                   Navigator.pop(context);
