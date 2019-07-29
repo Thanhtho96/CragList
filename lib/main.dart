@@ -49,20 +49,14 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
-    var contextWidth = MediaQuery
-        .of(context)
-        .size
-        .width;
-    var contextHeight = MediaQuery
-        .of(context)
-        .size
-        .height;
+    var contextWidth = MediaQuery.of(context).size.width;
+    var contextHeight = MediaQuery.of(context).size.height;
 
     return new Scaffold(body: LayoutBuilder(builder: (context, constraints) {
       return SingleChildScrollView(
         child: ConstrainedBox(
           constraints:
-          BoxConstraints(minWidth: contextWidth, minHeight: contextHeight),
+              BoxConstraints(minWidth: contextWidth, minHeight: contextHeight),
           child: IntrinsicHeight(
             child: Stack(
               children: <Widget>[
@@ -94,7 +88,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                             fontSize: 30.0,
                                             letterSpacing: 2.46,
                                             color:
-                                            Color.fromRGBO(73, 128, 249, 1),
+                                                Color.fromRGBO(73, 128, 249, 1),
                                             fontFamily: "SFProDisplay-Regular"),
                                       ))
                                 ],
@@ -131,7 +125,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                     hintText: 'user name / email',
                                     filled: true,
                                     fillColor:
-                                    Color.fromRGBO(246, 247, 249, 1)),
+                                        Color.fromRGBO(246, 247, 249, 1)),
                                 style: new TextStyle(
                                     fontSize: 16.0,
                                     letterSpacing: 0.59,
@@ -161,7 +155,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                       hintText: 'password',
                                       filled: true,
                                       fillColor:
-                                      Color.fromRGBO(246, 247, 249, 1)),
+                                          Color.fromRGBO(246, 247, 249, 1)),
                                   style: new TextStyle(
                                       fontSize: 16.0,
                                       letterSpacing: 0.59,
@@ -209,9 +203,8 @@ class _MyHomePageState extends State<MyHomePage> {
                                             fontFamily: "SFProDisplay-Regular",
                                             color: Color.fromRGBO(
                                                 73, 128, 249, 1))),
-                                    onTap: () =>
-                                        launch(
-                                            'https://handsomeman.herokuapp.com/api'))),
+                                    onTap: () => launch(
+                                        'https://handsomeman.herokuapp.com/api'))),
                             new Container(
                               alignment: Alignment.center,
                               child: new InkWell(
@@ -221,10 +214,9 @@ class _MyHomePageState extends State<MyHomePage> {
                                           letterSpacing: 0.59,
                                           fontFamily: "SFProDisplay-Regular",
                                           color:
-                                          Color.fromRGBO(73, 128, 249, 1))),
-                                  onTap: () =>
-                                      launch(
-                                          'https://handsomeman.herokuapp.com/api')),
+                                              Color.fromRGBO(73, 128, 249, 1))),
+                                  onTap: () => launch(
+                                      'https://handsomeman.herokuapp.com/api')),
                             ),
                             new Container(
                                 alignment: Alignment.bottomCenter,
@@ -235,9 +227,8 @@ class _MyHomePageState extends State<MyHomePage> {
                                           letterSpacing: 0.52,
                                           fontFamily: "SFProDisplay-Regular",
                                           color: Colors.black)),
-                                  onTap: () =>
-                                      launch(
-                                          'https://handsomeman.herokuapp.com/api'),
+                                  onTap: () => launch(
+                                      'https://handsomeman.herokuapp.com/api'),
                                 ))
                           ],
                         ),
