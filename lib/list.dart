@@ -149,7 +149,6 @@ class _ListState extends State<list> {
                           Navigator.pushNamed(context, '/fifth');
                         },
                         child: new Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: <Widget>[
                             Container(
                                 padding: EdgeInsets.all(0),
@@ -176,52 +175,59 @@ class _ListState extends State<list> {
                                     ),
                                   ),
                                   Container(
-                                    alignment: Alignment.bottomCenter,
                                     padding: EdgeInsets.only(
-                                        left :9, top: 62, right: 143, bottom: 0),
+                                        left :9, top: 62, bottom: 0),
                                     child: Row(
-//                                      mainAxisAlignment:
-//                                          MainAxisAlignment.spaceEvenly,
-//                                      mainAxisSize: MainAxisSize.min,
                                       children: <Widget>[
                                         Expanded(
-                                          child: GestureDetector(
+                                          child: Container(
+                                            child: Row(
+                                              children: <Widget>[
+                                                Expanded(
+                                                  child: GestureDetector(
 //                                          key: ,
-                                            onTap: _toggleStar,
-                                            child: _isStared
-                                                ? Image.asset(
-                                                    "images/stared.png")
-                                                : new Image.asset(
-                                                    "images/star.png"),
+                                                    onTap: _toggleStar,
+                                                    child: _isStared
+                                                        ? Image.asset(
+                                                            "images/stared.png")
+                                                        : new Image.asset(
+                                                            "images/star.png"),
+                                                  ),
+                                                ),
+                                                Expanded(
+                                                  child: GestureDetector(
+                                                    onTap: _toggleFavorite,
+                                                    child: _isFavorited
+                                                        ? Image.asset(
+                                                            "images/shaped.png")
+                                                        : new Image.asset(
+                                                            "images/shape.png"),
+                                                  ),
+                                                ),
+                                                Expanded(
+                                                    child: Image.asset(
+                                                        "images/forward_arrow.png")),
+                                              ],
+                                            ),
                                           ),
                                         ),
                                         Expanded(
-                                          child: GestureDetector(
-                                            onTap: _toggleFavorite,
-                                            child: _isFavorited
-                                                ? Image.asset(
-                                                    "images/shaped.png")
-                                                : new Image.asset(
-                                                    "images/shape.png"),
+                                          child: Container(
+                                          alignment: Alignment.bottomRight,
+                                            child: Text(
+                                              "2hrs ago",
+                                              style: TextStyle(
+                                                  fontSize: 12,
+                                                  letterSpacing: 0.33,
+                                                  color: Color.fromRGBO(0, 0, 0, 80),
+                                                  fontFamily: "SFProDisplay-Regular"),
+                                            ),
                                           ),
-                                        ),
-                                        Expanded(
-                                            child: Image.asset(
-                                                "images/forward_arrow.png")),
+                                        )
                                       ],
                                     ),
                                   ),
-                                  Container(
-                                    alignment: Alignment.bottomRight,
-                                    child: Text(
-                                      "2hrs ago",
-                                      style: TextStyle(
-                                          fontSize: 12,
-                                          letterSpacing: 0.33,
-                                          color: Color.fromRGBO(0, 0, 0, 80),
-                                          fontFamily: "SFProDisplay-Regular"),
-                                    ),
-                                  )
+
                                 ],
                               ),
                             )
@@ -241,14 +247,13 @@ class _ListState extends State<list> {
                         padding: EdgeInsets.all(10),
                         shape: RoundedRectangleBorder(
                           borderRadius:
-                              new BorderRadius.all(Radius.circular(10)),
+                          new BorderRadius.all(Radius.circular(10)),
                         ),
                         color: Colors.white,
                         onPressed: () {
                           Navigator.pushNamed(context, '/fifth');
                         },
                         child: new Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: <Widget>[
                             Container(
                                 padding: EdgeInsets.all(0),
@@ -275,37 +280,46 @@ class _ListState extends State<list> {
                                     ),
                                   ),
                                   Container(
-                                    alignment: Alignment.bottomCenter,
-                                    padding:
-                                        EdgeInsets.only(left :9,top: 62, right: 143),
+                                    padding: EdgeInsets.only(
+                                        left :9, top: 62, bottom: 0),
                                     child: Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceBetween,
-                                      mainAxisSize: MainAxisSize.max,
                                       children: <Widget>[
                                         Expanded(
-                                            child:
-                                                Image.asset("images/star.png")),
+                                          child: Container(
+                                            child: Row(
+                                              children: <Widget>[
+                                                Expanded(
+                                                  child: new Image.asset(
+                                                      "images/star.png"),
+                                                ),
+                                                Expanded(
+                                                  child: new Image.asset(
+                                                      "images/shape.png"),
+                                                ),
+                                                Expanded(
+                                                    child: Image.asset(
+                                                        "images/forward_arrow.png")),
+                                              ],
+                                            ),
+                                          ),
+                                        ),
                                         Expanded(
-                                            child: Image.asset(
-                                                "images/shape.png")),
-                                        Expanded(
-                                            child: Image.asset(
-                                                "images/forward_arrow.png")),
+                                          child: Container(
+                                            alignment: Alignment.bottomRight,
+                                            child: Text(
+                                              "5hrs ago",
+                                              style: TextStyle(
+                                                  fontSize: 12,
+                                                  letterSpacing: 0.33,
+                                                  color: Color.fromRGBO(0, 0, 0, 80),
+                                                  fontFamily: "SFProDisplay-Regular"),
+                                            ),
+                                          ),
+                                        )
                                       ],
                                     ),
                                   ),
-                                  Container(
-                                    alignment: Alignment.bottomRight,
-                                    child: Text(
-                                      "5hrs ago",
-                                      style: TextStyle(
-                                          fontSize: 12,
-                                          letterSpacing: 0.33,
-                                          color: Color.fromRGBO(0, 0, 0, 80),
-                                          fontFamily: "SFProDisplay-Regular"),
-                                    ),
-                                  )
+
                                 ],
                               ),
                             )
@@ -325,14 +339,13 @@ class _ListState extends State<list> {
                         padding: EdgeInsets.all(10),
                         shape: RoundedRectangleBorder(
                           borderRadius:
-                              new BorderRadius.all(Radius.circular(10)),
+                          new BorderRadius.all(Radius.circular(10)),
                         ),
                         color: Colors.white,
                         onPressed: () {
                           Navigator.pushNamed(context, '/fifth');
                         },
                         child: new Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: <Widget>[
                             Container(
                                 padding: EdgeInsets.all(0),
@@ -359,37 +372,46 @@ class _ListState extends State<list> {
                                     ),
                                   ),
                                   Container(
-                                    alignment: Alignment.bottomCenter,
-                                    padding:
-                                        EdgeInsets.only(left :9,top: 62, right: 143),
+                                    padding: EdgeInsets.only(
+                                        left :9, top: 62, bottom: 0),
                                     child: Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceBetween,
-                                      mainAxisSize: MainAxisSize.max,
                                       children: <Widget>[
                                         Expanded(
-                                            child:
-                                                Image.asset("images/star.png")),
+                                          child: Container(
+                                            child: Row(
+                                              children: <Widget>[
+                                                Expanded(
+                                                  child: new Image.asset(
+                                                      "images/star.png"),
+                                                ),
+                                                Expanded(
+                                                  child: new Image.asset(
+                                                      "images/shape.png"),
+                                                ),
+                                                Expanded(
+                                                    child: Image.asset(
+                                                        "images/forward_arrow.png")),
+                                              ],
+                                            ),
+                                          ),
+                                        ),
                                         Expanded(
-                                            child: Image.asset(
-                                                "images/shape.png")),
-                                        Expanded(
-                                            child: Image.asset(
-                                                "images/forward_arrow.png")),
+                                          child: Container(
+                                            alignment: Alignment.bottomRight,
+                                            child: Text(
+                                              "12hrs ago",
+                                              style: TextStyle(
+                                                  fontSize: 12,
+                                                  letterSpacing: 0.33,
+                                                  color: Color.fromRGBO(0, 0, 0, 80),
+                                                  fontFamily: "SFProDisplay-Regular"),
+                                            ),
+                                          ),
+                                        )
                                       ],
                                     ),
                                   ),
-                                  Container(
-                                    alignment: Alignment.bottomRight,
-                                    child: Text(
-                                      "12hrs ago",
-                                      style: TextStyle(
-                                          fontSize: 12,
-                                          letterSpacing: 0.33,
-                                          color: Color.fromRGBO(0, 0, 0, 80),
-                                          fontFamily: "SFProDisplay-Regular"),
-                                    ),
-                                  )
+
                                 ],
                               ),
                             )
@@ -398,8 +420,7 @@ class _ListState extends State<list> {
                   ),
                 ),
                 new Container(
-                  padding:
-                      EdgeInsets.only(left: 15, top: 15, right: 15, bottom: 15),
+                  padding: EdgeInsets.only(left: 15, top: 15, right: 15),
                   decoration: BoxDecoration(boxShadow: [
                     new BoxShadow(
                         color: Color.fromRGBO(0, 0, 0, 0.08), blurRadius: 20)
@@ -410,14 +431,13 @@ class _ListState extends State<list> {
                         padding: EdgeInsets.all(10),
                         shape: RoundedRectangleBorder(
                           borderRadius:
-                              new BorderRadius.all(Radius.circular(10)),
+                          new BorderRadius.all(Radius.circular(10)),
                         ),
                         color: Colors.white,
                         onPressed: () {
                           Navigator.pushNamed(context, '/fifth');
                         },
                         child: new Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: <Widget>[
                             Container(
                                 padding: EdgeInsets.all(0),
@@ -444,37 +464,46 @@ class _ListState extends State<list> {
                                     ),
                                   ),
                                   Container(
-                                    alignment: Alignment.bottomCenter,
-                                    padding:
-                                        EdgeInsets.only(left :9,top: 62, right: 143),
+                                    padding: EdgeInsets.only(
+                                        left :9, top: 62, bottom: 0),
                                     child: Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceBetween,
-                                      mainAxisSize: MainAxisSize.max,
                                       children: <Widget>[
                                         Expanded(
-                                            child:
-                                                Image.asset("images/star.png")),
+                                          child: Container(
+                                            child: Row(
+                                              children: <Widget>[
+                                                Expanded(
+                                                  child: new Image.asset(
+                                                      "images/star.png"),
+                                                ),
+                                                Expanded(
+                                                  child: new Image.asset(
+                                                      "images/shape.png"),
+                                                ),
+                                                Expanded(
+                                                    child: Image.asset(
+                                                        "images/forward_arrow.png")),
+                                              ],
+                                            ),
+                                          ),
+                                        ),
                                         Expanded(
-                                            child: Image.asset(
-                                                "images/shape.png")),
-                                        Expanded(
-                                            child: Image.asset(
-                                                "images/forward_arrow.png")),
+                                          child: Container(
+                                            alignment: Alignment.bottomRight,
+                                            child: Text(
+                                              "18hrs ago",
+                                              style: TextStyle(
+                                                  fontSize: 12,
+                                                  letterSpacing: 0.33,
+                                                  color: Color.fromRGBO(0, 0, 0, 80),
+                                                  fontFamily: "SFProDisplay-Regular"),
+                                            ),
+                                          ),
+                                        )
                                       ],
                                     ),
                                   ),
-                                  Container(
-                                    alignment: Alignment.bottomRight,
-                                    child: Text(
-                                      "18hrs ago",
-                                      style: TextStyle(
-                                          fontSize: 12,
-                                          letterSpacing: 0.33,
-                                          color: Color.fromRGBO(0, 0, 0, 80),
-                                          fontFamily: "SFProDisplay-Regular"),
-                                    ),
-                                  )
+
                                 ],
                               ),
                             )
