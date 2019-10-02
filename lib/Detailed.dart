@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class detailed extends StatelessWidget {
+class Detailed extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var contextWidth = MediaQuery.of(context).size.width;

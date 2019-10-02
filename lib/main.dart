@@ -1,11 +1,11 @@
-import 'package:craigslist/category_card.dart';
-import 'package:craigslist/country_list.dart';
-import 'package:craigslist/list.dart';
+import 'package:craigslist/CategoryCard.dart';
+import 'package:craigslist/CountryList.dart';
+import 'package:craigslist/List.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-import 'detailed.dart';
+import 'Detailed.dart';
 
 void main() {
   // this line remove status bar
@@ -22,10 +22,10 @@ class MyApp extends StatelessWidget {
         // When navigating to the "/" route, build the FirstScreen widget.
 //        '/': (context) => country_list(),
         // When navigating to the "/second" route, build the SecondScreen widget.
-        '/second': (context) => country_list(),
-        '/third': (context) => category_card(),
-        '/fourth': (context) => list(),
-        "/fifth": (context) => detailed(),
+        '/second': (context) => CountryList(),
+        '/third': (context) => CategoryCard(),
+        '/fourth': (context) => List(),
+        "/fifth": (context) => Detailed(),
       },
       title: "Craigslist",
       theme: new ThemeData(

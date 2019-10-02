@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class category_card extends StatelessWidget {
+class CategoryCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(

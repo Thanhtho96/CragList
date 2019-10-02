@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class list extends StatefulWidget {
+class List extends StatefulWidget {
   @override
   _ListState createState() => new _ListState();
 }
 
-class _ListState extends State<list> {
+class _ListState extends State<List> {
   bool _isStared = true;
   bool _isFavorited = true;
 
@@ -184,6 +184,7 @@ class _ListState extends State<list> {
                                             child: Row(
                                               children: <Widget>[
                                                 Expanded(
+                                                  // this should to be a checkbox rather than what's below
                                                   child: GestureDetector(
 //                                          key: ,
                                                     onTap: _toggleStar,
@@ -195,6 +196,7 @@ class _ListState extends State<list> {
                                                   ),
                                                 ),
                                                 Expanded(
+                                                  // Here too!!! This should to be a checkbox rather than what's below
                                                   child: GestureDetector(
                                                     onTap: _toggleFavorite,
                                                     child: _isFavorited
