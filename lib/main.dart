@@ -1,9 +1,8 @@
-import 'package:craigslist/CategoryCard.dart';
-import 'package:craigslist/CountryList.dart';
-import 'package:craigslist/List.dart';
+import 'package:crag_list/CategoryCard.dart';
+import 'package:crag_list/CountryList.dart';
+import 'package:crag_list/List.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 import 'Detailed.dart';
 
@@ -40,7 +39,7 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key}) : super(key: key);
+  MyHomePage({Key? key}) : super(key: key);
 
   @override
   _MyHomePageState createState() => new _MyHomePageState();
@@ -54,191 +53,188 @@ class _MyHomePageState extends State<MyHomePage> {
 
     return new Scaffold(
         body: SingleChildScrollView(
-      child: ConstrainedBox(
-        constraints:
+          child: ConstrainedBox(
+            constraints:
             BoxConstraints(minWidth: contextWidth, minHeight: contextHeight),
-        child: IntrinsicHeight(
-          child: Stack(
-            children: <Widget>[
-              new Container(
-                child: new Image.asset(
-                  "images/path_3.png",
+            child: IntrinsicHeight(
+              child: Stack(
+                children: <Widget>[
+                  new Container(
+                    child: new Image.asset(
+                      "images/path_3.png",
 //                    width: contextWidth * 0.57,
 //                    fit: BoxFit.fill,
-                ),
-              ),
-              new Column(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: <Widget>[
-                  Expanded(
-                    child: new Container(
-                      height: contextHeight / 3,
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: <Widget>[
-                          Container(
-                            child: new Column(
-                              children: <Widget>[
-                                new Image.asset("images/combined_shape.png"),
-                                new Container(
-                                    padding: EdgeInsets.only(top: 15),
-                                    child: new Text(
-                                      "Craigslist",
-                                      style: new TextStyle(
-                                          fontSize: 30.0,
-                                          letterSpacing: 2.46,
-                                          color:
+                    ),
+                  ),
+                  new Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: <Widget>[
+                      Expanded(
+                        child: new Container(
+                          height: contextHeight / 3,
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: <Widget>[
+                              Container(
+                                child: new Column(
+                                  children: <Widget>[
+                                    new Image.asset("images/combined_shape.png"),
+                                    new Container(
+                                        padding: EdgeInsets.only(top: 15),
+                                        child: new Text(
+                                          "Craigslist",
+                                          style: new TextStyle(
+                                              fontSize: 30.0,
+                                              letterSpacing: 2.46,
+                                              color:
                                               Color.fromRGBO(73, 128, 249, 1),
-                                          fontFamily: "SFProDisplay-Regular"),
-                                    ))
-                              ],
-                            ),
-                          )
-                        ],
+                                              fontFamily: "SFProDisplay-Regular"),
+                                        ))
+                                  ],
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
                       ),
-                    ),
-                  ),
-                  Container(
+                      Container(
 //                      height: constraints.maxHeight/3,
-                    padding: EdgeInsets.only(left: 15, right: 15),
-                    child: Column(
-                      children: <Widget>[
-                        new Container(
-                            height: 49,
-                            child: new TextField(
-                              maxLengthEnforced: false,
-                              maxLines: 1,
-                              keyboardType: TextInputType.emailAddress,
-                              decoration: new InputDecoration(
-                                  contentPadding: EdgeInsets.only(
-                                      left: 15, top: 15, bottom: 15),
-                                  focusedBorder: new OutlineInputBorder(
-                                      borderRadius:
+                        padding: EdgeInsets.only(left: 15, right: 15),
+                        child: Column(
+                          children: <Widget>[
+                            new Container(
+                                height: 49,
+                                child: new TextField(
+                                  maxLengthEnforced: false,
+                                  maxLines: 1,
+                                  keyboardType: TextInputType.emailAddress,
+                                  decoration: new InputDecoration(
+                                      contentPadding: EdgeInsets.only(
+                                          left: 15, top: 15, bottom: 15),
+                                      focusedBorder: new OutlineInputBorder(
+                                          borderRadius:
                                           BorderRadius.all(Radius.circular(4)),
-                                      borderSide: BorderSide(
-                                          color: Colors.white, width: 0.0)),
-                                  enabledBorder: new OutlineInputBorder(
-                                      borderRadius:
+                                          borderSide: BorderSide(
+                                              color: Colors.white, width: 0.0)),
+                                      enabledBorder: new OutlineInputBorder(
+                                          borderRadius:
                                           BorderRadius.all(Radius.circular(4)),
-                                      borderSide: BorderSide(
-                                          color: Colors.white, width: 0.0)),
-                                  hintText: 'user name / email',
-                                  filled: true,
-                                  fillColor: Color.fromRGBO(246, 247, 249, 1)),
-                              style: new TextStyle(
-                                  fontSize: 16.0,
-                                  letterSpacing: 0.59,
-                                  fontFamily: "SFProDisplay"),
-                            )),
-                        Padding(
-                          padding: EdgeInsets.only(top: 20),
-                          child: new Container(
-                              height: 49,
-                              child: new TextField(
-                                maxLengthEnforced: false,
-                                maxLines: 1,
-                                obscureText: true,
-                                decoration: new InputDecoration(
-                                    contentPadding: EdgeInsets.only(
-                                        left: 15, top: 15, bottom: 15),
-                                    focusedBorder: new OutlineInputBorder(
-                                        borderRadius: BorderRadius.all(
-                                            Radius.circular(4)),
-                                        borderSide: BorderSide(
-                                            color: Colors.white, width: 0.0)),
-                                    enabledBorder: new OutlineInputBorder(
-                                        borderRadius: BorderRadius.all(
-                                            Radius.circular(4)),
-                                        borderSide: BorderSide(
-                                            color: Colors.white, width: 0.0)),
-                                    hintText: 'password',
-                                    filled: true,
-                                    fillColor:
-                                        Color.fromRGBO(246, 247, 249, 1)),
-                                style: new TextStyle(
-                                    fontSize: 16.0,
-                                    letterSpacing: 0.59,
-                                    fontFamily: "SFProDisplay"),
-                              )),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.only(top: 20, right: 1),
-                          child: new ButtonTheme(
-                            height: 50,
-                            minWidth: double.infinity,
-                            child: FlatButton(
-                                color: Color.fromRGBO(73, 128, 249, 1),
-                                onPressed: () {
-                                  Navigator.pushNamed(context, '/second');
-                                },
-                                child: new Text(
-                                  "LOGIN",
+                                          borderSide: BorderSide(
+                                              color: Colors.white, width: 0.0)),
+                                      hintText: 'user name / email',
+                                      filled: true,
+                                      fillColor: Color.fromRGBO(246, 247, 249, 1)),
                                   style: new TextStyle(
-                                      fontSize: 20.0,
-                                      letterSpacing: 0.74,
-                                      color: Colors.white,
-                                      fontFamily: "SFProDisplay-Semibold"),
+                                      fontSize: 16.0,
+                                      letterSpacing: 0.59,
+                                      fontFamily: "SFProDisplay"),
                                 )),
+                            Padding(
+                              padding: EdgeInsets.only(top: 20),
+                              child: new Container(
+                                  height: 49,
+                                  child: new TextField(
+                                    maxLengthEnforced: false,
+                                    maxLines: 1,
+                                    obscureText: true,
+                                    decoration: new InputDecoration(
+                                        contentPadding: EdgeInsets.only(
+                                            left: 15, top: 15, bottom: 15),
+                                        focusedBorder: new OutlineInputBorder(
+                                            borderRadius: BorderRadius.all(
+                                                Radius.circular(4)),
+                                            borderSide: BorderSide(
+                                                color: Colors.white, width: 0.0)),
+                                        enabledBorder: new OutlineInputBorder(
+                                            borderRadius: BorderRadius.all(
+                                                Radius.circular(4)),
+                                            borderSide: BorderSide(
+                                                color: Colors.white, width: 0.0)),
+                                        hintText: 'password',
+                                        filled: true,
+                                        fillColor:
+                                        Color.fromRGBO(246, 247, 249, 1)),
+                                    style: new TextStyle(
+                                        fontSize: 16.0,
+                                        letterSpacing: 0.59,
+                                        fontFamily: "SFProDisplay"),
+                                  )),
+                            ),
+                            Padding(
+                              padding: EdgeInsets.only(top: 20, right: 1),
+                              child: new ButtonTheme(
+                                height: 50,
+                                minWidth: double.infinity,
+                                child: FlatButton(
+                                    color: Color.fromRGBO(73, 128, 249, 1),
+                                    onPressed: () {
+                                      Navigator.pushNamed(context, '/second');
+                                    },
+                                    child: new Text(
+                                      "LOGIN",
+                                      style: new TextStyle(
+                                          fontSize: 20.0,
+                                          letterSpacing: 0.74,
+                                          color: Colors.white,
+                                          fontFamily: "SFProDisplay-Semibold"),
+                                    )),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      Expanded(
+                        child: Container(
+                          padding: EdgeInsets.only(top: 15, bottom: 10),
+                          height: contextHeight / 3,
+                          child: new Column(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: <Widget>[
+                              new Container(
+                                  padding: EdgeInsets.only(right: 15),
+                                  alignment: Alignment.topRight,
+                                  child: new InkWell(
+                                      child: new Text('Forgot Password?',
+                                          style: new TextStyle(
+                                              fontSize: 16,
+                                              letterSpacing: 0.59,
+                                              fontFamily: "SFProDisplay-Regular",
+                                              color:
+                                              Color.fromRGBO(73, 128, 249, 1))),
+                                      onTap: () => {})),
+                              new Container(
+                                alignment: Alignment.center,
+                                child: new InkWell(
+                                    child: new Text('Need an account? Click Here',
+                                        style: new TextStyle(
+                                            fontSize: 16,
+                                            letterSpacing: 0.59,
+                                            fontFamily: "SFProDisplay-Regular",
+                                            color:
+                                            Color.fromRGBO(73, 128, 249, 1))),
+                                    onTap: () => {}),
+                              ),
+                              new Container(
+                                  alignment: Alignment.bottomCenter,
+                                  child: new InkWell(
+                                    child: new Text("FAQ - Privacy Policy",
+                                        style: new TextStyle(
+                                            fontSize: 14,
+                                            letterSpacing: 0.52,
+                                            fontFamily: "SFProDisplay-Regular",
+                                            color: Colors.black)),
+                                    onTap: () => {},
+                                  ))
+                            ],
                           ),
                         ),
-                      ],
-                    ),
+                      )
+                    ],
                   ),
-                  Expanded(
-                    child: Container(
-                      padding: EdgeInsets.only(top: 15, bottom: 10),
-                      height: contextHeight / 3,
-                      child: new Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: <Widget>[
-                          new Container(
-                              padding: EdgeInsets.only(right: 15),
-                              alignment: Alignment.topRight,
-                              child: new InkWell(
-                                  child: new Text('Forgot Password?',
-                                      style: new TextStyle(
-                                          fontSize: 16,
-                                          letterSpacing: 0.59,
-                                          fontFamily: "SFProDisplay-Regular",
-                                          color:
-                                              Color.fromRGBO(73, 128, 249, 1))),
-                                  onTap: () => launch(
-                                      'https://handsomeman.herokuapp.com/api'))),
-                          new Container(
-                            alignment: Alignment.center,
-                            child: new InkWell(
-                                child: new Text('Need an account? Click Here',
-                                    style: new TextStyle(
-                                        fontSize: 16,
-                                        letterSpacing: 0.59,
-                                        fontFamily: "SFProDisplay-Regular",
-                                        color:
-                                            Color.fromRGBO(73, 128, 249, 1))),
-                                onTap: () => launch(
-                                    'https://handsomeman.herokuapp.com/api')),
-                          ),
-                          new Container(
-                              alignment: Alignment.bottomCenter,
-                              child: new InkWell(
-                                child: new Text("FAQ - Privacy Policy",
-                                    style: new TextStyle(
-                                        fontSize: 14,
-                                        letterSpacing: 0.52,
-                                        fontFamily: "SFProDisplay-Regular",
-                                        color: Colors.black)),
-                                onTap: () => launch(
-                                    'https://handsomeman.herokuapp.com/api'),
-                              ))
-                        ],
-                      ),
-                    ),
-                  )
                 ],
               ),
-            ],
+            ),
           ),
-        ),
-      ),
-    ));
+        ));
   }
 }

@@ -32,7 +32,7 @@ class _ListState extends State<List> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      resizeToAvoidBottomPadding: false,
+      // resizeToAvoidBottomPadding: false,
       body: new Stack(
         children: <Widget>[
           new Container(
@@ -74,8 +74,8 @@ class _ListState extends State<List> {
                           )),
                       new Container(
                           child: new Image.asset(
-                        "images/group_4.png",
-                      )),
+                            "images/group_4.png",
+                          )),
                     ],
                   ),
                 ),
@@ -102,17 +102,17 @@ class _ListState extends State<List> {
                     child: new TextField(
                       decoration: new InputDecoration(
                           contentPadding:
-                              EdgeInsets.only(left: 15, top: 6, bottom: 6),
+                          EdgeInsets.only(left: 15, top: 6, bottom: 6),
                           focusedBorder: new OutlineInputBorder(
                               borderRadius:
-                                  BorderRadius.all(Radius.circular(32)),
+                              BorderRadius.all(Radius.circular(32)),
                               borderSide:
-                                  BorderSide(color: Colors.white, width: 0.0)),
+                              BorderSide(color: Colors.white, width: 0.0)),
                           enabledBorder: new OutlineInputBorder(
                               borderRadius:
-                                  BorderRadius.all(Radius.circular(32)),
+                              BorderRadius.all(Radius.circular(32)),
                               borderSide:
-                                  BorderSide(color: Colors.white, width: 0.0)),
+                              BorderSide(color: Colors.white, width: 0.0)),
                           hintText: 'Search',
                           filled: true,
                           fillColor: Color.fromRGBO(246, 247, 249, 1),
@@ -142,7 +142,7 @@ class _ListState extends State<List> {
                         padding: EdgeInsets.all(10),
                         shape: RoundedRectangleBorder(
                           borderRadius:
-                              new BorderRadius.all(Radius.circular(10)),
+                          new BorderRadius.all(Radius.circular(10)),
                         ),
                         color: Colors.white,
                         onPressed: () {
@@ -190,9 +190,9 @@ class _ListState extends State<List> {
                                                     onTap: _toggleStar,
                                                     child: _isStared
                                                         ? Image.asset(
-                                                            "images/stared.png")
+                                                        "images/stared.png")
                                                         : new Image.asset(
-                                                            "images/star.png"),
+                                                        "images/star.png"),
                                                   ),
                                                 ),
                                                 Expanded(
@@ -201,9 +201,9 @@ class _ListState extends State<List> {
                                                     onTap: _toggleFavorite,
                                                     child: _isFavorited
                                                         ? Image.asset(
-                                                            "images/shaped.png")
+                                                        "images/shaped.png")
                                                         : new Image.asset(
-                                                            "images/shape.png"),
+                                                        "images/shape.png"),
                                                   ),
                                                 ),
                                                 Expanded(
@@ -224,7 +224,7 @@ class _ListState extends State<List> {
                                                   color: Color.fromRGBO(
                                                       0, 0, 0, 80),
                                                   fontFamily:
-                                                      "SFProDisplay-Regular"),
+                                                  "SFProDisplay-Regular"),
                                             ),
                                           ),
                                         )
@@ -250,7 +250,7 @@ class _ListState extends State<List> {
                         padding: EdgeInsets.all(10),
                         shape: RoundedRectangleBorder(
                           borderRadius:
-                              new BorderRadius.all(Radius.circular(10)),
+                          new BorderRadius.all(Radius.circular(10)),
                         ),
                         color: Colors.white,
                         onPressed: () {
@@ -317,7 +317,7 @@ class _ListState extends State<List> {
                                                   color: Color.fromRGBO(
                                                       0, 0, 0, 80),
                                                   fontFamily:
-                                                      "SFProDisplay-Regular"),
+                                                  "SFProDisplay-Regular"),
                                             ),
                                           ),
                                         )
@@ -343,7 +343,7 @@ class _ListState extends State<List> {
                         padding: EdgeInsets.all(10),
                         shape: RoundedRectangleBorder(
                           borderRadius:
-                              new BorderRadius.all(Radius.circular(10)),
+                          new BorderRadius.all(Radius.circular(10)),
                         ),
                         color: Colors.white,
                         onPressed: () {
@@ -410,7 +410,7 @@ class _ListState extends State<List> {
                                                   color: Color.fromRGBO(
                                                       0, 0, 0, 80),
                                                   fontFamily:
-                                                      "SFProDisplay-Regular"),
+                                                  "SFProDisplay-Regular"),
                                             ),
                                           ),
                                         )
@@ -436,7 +436,7 @@ class _ListState extends State<List> {
                         padding: EdgeInsets.all(10),
                         shape: RoundedRectangleBorder(
                           borderRadius:
-                              new BorderRadius.all(Radius.circular(10)),
+                          new BorderRadius.all(Radius.circular(10)),
                         ),
                         color: Colors.white,
                         onPressed: () {
@@ -503,7 +503,7 @@ class _ListState extends State<List> {
                                                   color: Color.fromRGBO(
                                                       0, 0, 0, 80),
                                                   fontFamily:
-                                                      "SFProDisplay-Regular"),
+                                                  "SFProDisplay-Regular"),
                                             ),
                                           ),
                                         )

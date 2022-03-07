@@ -11,7 +11,7 @@ class Detailed extends StatelessWidget {
       body: SingleChildScrollView(
         child: ConstrainedBox(
           constraints:
-              BoxConstraints(minWidth: contextWidth, minHeight: contextHeight),
+          BoxConstraints(minWidth: contextWidth, minHeight: contextHeight),
           child: IntrinsicHeight(
             child: new Column(
               children: <Widget>[
@@ -19,11 +19,11 @@ class Detailed extends StatelessWidget {
                   children: <Widget>[
                     Container(
                         child: Image.asset(
-                      "images/path_3.png",
-                      width: contextWidth,
-                      height: contextWidth - 124,
-                      fit: BoxFit.fill,
-                    )),
+                          "images/path_3.png",
+                          width: contextWidth,
+                          height: contextWidth - 124,
+                          fit: BoxFit.fill,
+                        )),
                     GestureDetector(
                       onTap: () {
                         Navigator.pop(context);

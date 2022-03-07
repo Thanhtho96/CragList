@@ -35,41 +35,41 @@ class CountryList extends StatelessWidget {
           ),
           new Center(
               child: Padding(
-            padding: EdgeInsets.only(left: 15, top: 81, right: 15),
-            child: Container(
-              child: Column(
-                children: <Widget>[
-                  SingleChildScrollView(
-                    child: new Container(
-                        height: 36,
-                        child: new TextField(
-                          decoration: new InputDecoration(
-                              contentPadding:
+                padding: EdgeInsets.only(left: 15, top: 81, right: 15),
+                child: Container(
+                  child: Column(
+                    children: <Widget>[
+                      SingleChildScrollView(
+                        child: new Container(
+                            height: 36,
+                            child: new TextField(
+                              decoration: new InputDecoration(
+                                  contentPadding:
                                   EdgeInsets.only(left: 15, top: 6, bottom: 6),
-                              focusedBorder: new OutlineInputBorder(
-                                  borderRadius:
+                                  focusedBorder: new OutlineInputBorder(
+                                      borderRadius:
                                       BorderRadius.all(Radius.circular(32)),
-                                  borderSide: BorderSide(
-                                      color: Colors.white, width: 0.0)),
-                              enabledBorder: new OutlineInputBorder(
-                                  borderRadius:
+                                      borderSide: BorderSide(
+                                          color: Colors.white, width: 0.0)),
+                                  enabledBorder: new OutlineInputBorder(
+                                      borderRadius:
                                       BorderRadius.all(Radius.circular(32)),
-                                  borderSide: BorderSide(
-                                      color: Colors.white, width: 0.0)),
-                              hintText: 'Search',
-                              filled: true,
-                              fillColor: Color.fromRGBO(246, 247, 249, 1),
-                              suffixIcon: Image.asset("images/search.png")),
-                          style: new TextStyle(
-                              fontSize: 20.0,
-                              letterSpacing: 0.29,
-                              fontFamily: "SFProDisplay"),
-                        )),
+                                      borderSide: BorderSide(
+                                          color: Colors.white, width: 0.0)),
+                                  hintText: 'Search',
+                                  filled: true,
+                                  fillColor: Color.fromRGBO(246, 247, 249, 1),
+                                  suffixIcon: Image.asset("images/search.png")),
+                              style: new TextStyle(
+                                  fontSize: 20.0,
+                                  letterSpacing: 0.29,
+                                  fontFamily: "SFProDisplay"),
+                            )),
+                      ),
+                    ],
                   ),
-                ],
-              ),
-            ),
-          )),
+                ),
+              )),
           Padding(
             padding: EdgeInsets.only(top: 132),
             child: new ListView(padding: EdgeInsets.all(0), children: <Widget>[
